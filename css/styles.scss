@@ -1,0 +1,127 @@
+$background-jumbotron : #59bab7;
+$background-light:#f3efe0;
+$background-lighter: #ffffff;
+$background-dark: #434242;
+$background-darker: #222222;
+$font-light: #ffffff;
+$font-dark:#bebebe;
+$font-darker: #434242;
+$font-blue: #22a39f;
+
+html{
+    scroll-behavior: smooth
+}
+.jumbotron {
+    padding:0px;
+    margin:0px;
+    min-height: 100%;
+    min-height: 100vh;
+    border-radius: 0px;
+    background-color: $background-jumbotron;
+    color: $font-light;
+    h1{
+        font-size:60px
+    }
+    h4{
+        font-weight: 1; //change this
+    }
+    hr{
+        margin-left:auto; 
+        margin-right: auto;
+        border-top: 1px solid #8bcbc9;
+    }
+}
+.nav {
+    background-color:$background-darker;
+    top: 30%;
+    right: 4%;
+    padding:10px;
+    z-index: 999;
+    
+    .navbar-nav {
+        a{
+            margin: 5px;
+            color: $font-light;
+        }
+        a:hover{
+            color: $font-dark;
+        }
+    }
+}
+.nav-not-sm{
+    position:fixed;
+    border-radius: 5px;
+    width: 12%;
+    
+}
+.nav-smol{
+    position: absolute;
+    top:94%;
+    right:0%;
+    width:100%;
+    border-radius: 0px;
+}
+.vertical-center{
+    display: flex;
+    align-items: center;
+}
+hr {
+    display: block; 
+    height: 1px;
+    border: 0; 
+    margin: 1em 0; 
+    padding: 0;
+}
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+  }
+
+#main{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.footer{
+    margin:0px;
+    padding:100px 0px 100px 0px;
+    background-color: $background-dark;
+    color: $font-dark;
+    hr{
+        border-top: 1px solid #6c7272;
+    }
+    .row-header{
+        padding:20px
+    }
+    ul li{
+        list-style-type: none;
+        margin-bottom: 20px;
+    }
+    a {
+        color:$font-dark;
+        text-decoration: none;
+    }
+    a:hover{
+        color:$font-light;
+    }
+    .fa{
+        font-size: xx-large;
+    }
+}
+
+#contactlinks{
+    padding:30px;
+}
+#nav {
+    text-align: right;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  #alt-nav{
+    top:0%;
+    position: fixed;
+  }
