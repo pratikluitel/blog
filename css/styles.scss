@@ -30,6 +30,13 @@ html{
         margin-right: auto;
         border-top: 1px solid #8bcbc9;
     }
+    .btn-secondary{
+        background-color:#8bcbc9;
+        border: $background-jumbotron;
+    }
+    .btn-secondary:hover{
+        background-color: $background-jumbotron;
+    }
 }
 .nav {
     background-color:$background-darker;
@@ -56,7 +63,7 @@ html{
 }
 .nav-smol{
     position: absolute;
-    top:94%;
+    top:100%;
     right:0%;
     width:100%;
     border-radius: 0px;

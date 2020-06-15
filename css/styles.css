@@ -17,6 +17,11 @@ html {
     margin-left: auto;
     margin-right: auto;
     border-top: 1px solid #8bcbc9; }
+  .jumbotron .btn-secondary {
+    background-color: #8bcbc9;
+    border: #59bab7; }
+  .jumbotron .btn-secondary:hover {
+    background-color: #59bab7; }
 
 .nav {
   background-color: #222222;
@@ -37,7 +42,7 @@ html {
 
 .nav-smol {
   position: absolute;
-  top: 94%;
+  top: 100%;
   right: 0%;
   width: 100%;
   border-radius: 0px; }
