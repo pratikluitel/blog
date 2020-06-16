@@ -49,33 +49,34 @@ a:hover{
     background-color:$background-darker;
     top: 30%;
     right: 4%;
-    padding-top:15px;
-    padding-bottom:15px;
     z-index: 999;
-    
+    .active{
+        background-color: $background-jumbotron;
+    }
     .navbar-nav {
         a{
             margin: 5px;
             color: $font-light;
         }
-        a:hover{
-            color: $font-dark;
-        }
+    }
+    li:hover{
+        background-color: $font-blue;
     }
 }
 .nav-not-sm{
     position:fixed;
-    border-radius: 5px;
+    //border-radius: 5px;
     width: 12%;
-    
 }
 
 .nav-for-lg{
     position:fixed;
-    border-radius: 5px;
+    //border-radius: 5px;
     width: 9%;
 }
 .nav-smol{
+    padding-top:15px;
+    padding-bottom:15px;
     position: absolute;
     top:100%;
     right:0%;
@@ -149,6 +150,7 @@ hr {
 
 #title{
     text-align: center;
+    color:$font-blue;
 }
 
 .author-pic{
@@ -156,5 +158,5 @@ hr {
     height: 300px;
     border-radius: 150px 150px 0px 150px;
     margin-top: 40px;
-    background-image: url("../img/personal/profile.jpg");
+    background-image: url("/img/personal/profile.jpg");
 }
