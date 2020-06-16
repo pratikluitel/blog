@@ -5,7 +5,8 @@ a {
   color: #22a39f; }
 
 a:hover {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #59bab7; }
 
 .jumbotron {
   padding: 0px;

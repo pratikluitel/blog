@@ -7,8 +7,10 @@ $font-light: #ffffff;
 $font-dark:#bebebe;
 $font-darker: #434242;
 $font-blue: #22a39f;
+$font-family-sans-serif: "Arial";
 
 html{
+
     scroll-behavior: smooth;
 }
 a{
@@ -17,6 +19,7 @@ a{
 }
 a:hover{
     text-decoration: none;
+    color:$background-jumbotron;
 }
 .jumbotron {
     padding:0px;

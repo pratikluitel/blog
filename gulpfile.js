@@ -59,6 +59,12 @@ gulp.task('copyfonts', function() {
  .pipe(gulp.dest('./dist/fonts'));
 });
 
+//copies blog
+gulp.task('copyfonts', function() {
+   return gulp.src('./blog')
+   .pipe(gulp.dest('./dist/blog'));
+  });
+
 // Image compression
 gulp.task('imagemin', function() {
    return gulp.src('img/**/*.{png,jpg,gif}')
