@@ -1,6 +1,12 @@
 html {
   scroll-behavior: smooth; }
 
+a {
+  color: #22a39f; }
+
+a:hover {
+  text-decoration: none; }
+
 .jumbotron {
   padding: 0px;
   margin: 0px;
@@ -27,7 +33,8 @@ html {
   background-color: #222222;
   top: 30%;
   right: 4%;
-  padding: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   z-index: 999; }
   .nav .navbar-nav a {
     margin: 5px;
@@ -39,6 +46,11 @@ html {
   position: fixed;
   border-radius: 5px;
   width: 12%; }
+
+.nav-for-lg {
+  position: fixed;
+  border-radius: 5px;
+  width: 9%; }
 
 .nav-smol {
   position: absolute;
@@ -64,7 +76,7 @@ hr {
   z-index: 9999 !important; }
 
 #main {
-  padding-top: 80px;
+  padding-top: 120px;
   padding-bottom: 80px; }
 
 .footer {
@@ -101,3 +113,13 @@ hr {
 #alt-nav {
   top: 0%;
   position: fixed; }
+
+#title {
+  text-align: center; }
+
+.author-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px 150px 0px 150px;
+  margin-top: 40px;
+  background-image: url("../img/personal/profile.jpg"); }
