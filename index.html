@@ -1,13 +1,20 @@
 ---
 layout: default-index
 ---
-
-<div class="col-10 col-sm-8 offset-1 offset-sm-2">
-    <ul style="list-style-position: inside;" id="main">
+<div class="col-10 col-sm-8 offset-1 offset-sm-2" id="main">
+    <ul style="list-style-position: inside;" id="mainlist">
         {% for post in site.posts%}
-        <li>
-            <a href="{{ post.url }}">{{ post.title }}</a> - {{post.date | date: "%d %B %Y" }}
-        </li>
+        <div class="card">
+            <div class="card-body">
+                
+                <li>
+                    <a href="{{ post.url }}" style="font-size: xx-large;">{{ post.title }}</a>
+                    <p style="color:#434242; font-size: small;">{{post.date | date: "%d %B %Y" }}</p>
+                    <p>{{ post.highlight }} <span style="font-size: x-small; color:#22a39f">(Read)</span></p>
+                </li>
+                <a href="{{ post.url }}" class="stretched-link"></a>
+            </div>
+        </div>
         {%endfor %}
     </ul>
 </div>

@@ -8,6 +8,7 @@ $font-dark:#bebebe;
 $font-darker: #434242;
 $font-blue: #22a39f;
 $font-family-sans-serif: "Arial";
+$feed-color:#f3efe0;
 
 html{
 
@@ -110,6 +111,9 @@ hr {
     padding-top: 120px;
     padding-bottom: 80px;
 }
+#mainlist{
+        list-style-type: none;
+}
 
 .footer{
     margin:0px;
@@ -158,6 +162,7 @@ hr {
 #title{
     text-align: center;
     color:$font-blue;
+    padding-bottom: 60px;
 }
 
 .author-pic{
@@ -166,4 +171,9 @@ hr {
     border-radius: 150px 150px 0px 150px;
     margin-top: 40px;
     background-image: url("/img/personal/profile.jpg");
+}
+.card{
+    padding: 10px;
+    background-color: $feed-color;
+    margin-bottom: 20px;
 }

@@ -1,2 +1,0 @@
-To access mysql, use
-$ mysql -uroot -p
