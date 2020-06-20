@@ -97,5 +97,5 @@ gulp.task('copyyy',
      .pipe(gulp.dest('./dist/'))
   })
 
-
-gulp.task('default',gulp.series('clean', gulp.parallel('copyfonts','copyblog','copytemp','imagemin','usemin'), 'copyy','copyyy', 'jekyll'));     //add copyfonts to this once you use fonts
+gulp.task('build',gulp.series('clean', gulp.parallel('copyfonts','copyblog','copytemp','imagemin','usemin'), 'copyy','copyyy'));
+gulp.task('default',gulp.series('build', gulp.parallel('watch','jekyll')));

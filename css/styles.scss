@@ -176,4 +176,15 @@ hr {
     padding: 10px;
     background-color: $feed-color;
     margin-bottom: 20px;
+    .card-header{
+        background-color: $feed-color;
+        color: $background-jumbotron;
+    }
+    #date{
+        color:#434242; 
+        font-size: x-small;
+    }
+}
+.card:hover{
+    box-shadow: 8px 12px 31px -10px;
 }

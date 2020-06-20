@@ -134,3 +134,12 @@ hr {
   padding: 10px;
   background-color: #f3efe0;
   margin-bottom: 20px; }
+  .card .card-header {
+    background-color: #f3efe0;
+    color: #59bab7; }
+  .card #date {
+    color: #434242;
+    font-size: x-small; }
+
+.card:hover {
+  box-shadow: 8px 12px 31px -10px; }
