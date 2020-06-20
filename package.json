@@ -17,10 +17,12 @@
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-cli": "^2.3.0",
+    "gulp-exec": "^5.0.0",
     "gulp-flatmap": "^1.0.2",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-rev": "^9.0.0",
+    "gulp-run-command": "0.0.10",
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
     "gulp-usemin": "^0.3.30"

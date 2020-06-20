@@ -57,8 +57,7 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0%;
-  width: 100%;
-  border-radius: 0px; }
+  width: 100%; }
 
 .vertical-center {
   display: flex;
@@ -113,7 +112,8 @@ hr {
 
 #alt-nav {
   top: 0%;
-  position: fixed; }
+  position: fixed;
+  text-align: right; }
 
 #title {
   text-align: center;

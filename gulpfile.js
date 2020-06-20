@@ -11,7 +11,9 @@ var gulp = require('gulp'),
     rev = require('gulp-rev'),
     cleanCss = require('gulp-clean-css'),
     flatmap = require('gulp-flatmap'),
-    htmlmin = require('gulp-htmlmin');
+    htmlmin = require('gulp-htmlmin'),
+    exec = require('gulp-exec'),
+    run =require('gulp-run-command').default;
 
 //definition of the sass task, compiles the scss in /css/scss
 //and puts the compiles css in the same destination
@@ -28,25 +30,13 @@ gulp.task('watch', function () {
   gulp.watch('./css/*.scss', gulp.series('sass'));
 });
 
-//browser sync task
-gulp.task('browser-sync', function () {
-   var files = [
-      './*.html',
-      './css/*.css',
-      './img/*.{png,jpg,gif}',
-      './js/*.js'
-   ];
-   //specifies dir of files to serve up, and the files.
-   browserSync.init(files, {
-      server: {
-         baseDir: "./"
-      }
-   });
 
-});
+gulp.task('jekyll', run('jekyll serve --source dist --dest dist/_site'));
+
+//browser sync task
 
 // Default task, is executed when we type 'gulp' to the terminal
-gulp.task('default', gulp.parallel('browser-sync', gulp.series('watch')));
+//gulp.task('default', gulp.parallel(gulp.series('watch')));
 
 //Cleans(deletes) the distribution(/dist/) directory, 
 gulp.task('clean', function(cb) {
@@ -59,10 +49,10 @@ gulp.task('copyfonts', function() {
  .pipe(gulp.dest('./dist/fonts'));
 });
 
-//copies blog
-gulp.task('copyfonts', function() {
-   return gulp.src('./blog')
-   .pipe(gulp.dest('./dist/blog'));
+gulp.task('copyblog', 
+  function(){
+   return gulp.src('./_posts/*')
+   .pipe(gulp.dest('./dist/_posts'));
   });
 
 // Image compression
@@ -75,18 +65,37 @@ gulp.task('imagemin', function() {
 
 //minimizes the css, js and html to one single file for easy and fast loading
 gulp.task('usemin', function() {
-   return gulp.src('./*.html')
+   return gulp.src('./_layouts/*.html')
    .pipe(flatmap(function(stream, file){
       return stream
    .pipe(usemin({
          css: [ rev() ],
-         html: [ function() { return htmlmin({ collapseWhitespace: true })} ],
+         
          js: [ uglify(), rev() ],
          inlinejs: [ uglify() ],
          inlinecss: [ cleanCss(), 'concat' ]
       }))
    }))
-   .pipe(gulp.dest('dist/'));
+   .pipe(gulp.dest('dist/_layouts/'))
 });
- 
-gulp.task('build',gulp.series('clean', gulp.parallel('copyfonts','imagemin','usemin')));     //add copyfonts to this once you use fonts
+
+//shell commands
+gulp.task('copyy', 
+  function(){
+   return gulp.src('./dist/_layouts/css/*')
+   .pipe(gulp.dest('./dist/css/'));
+  });
+
+gulp.task('copyyy', 
+  function(){
+   return gulp.src('./dist/_layouts/js/*')
+   .pipe(gulp.dest('./dist/js/'));
+  });
+
+  gulp.task('copytemp', function(){
+     return gulp.src('./*.html')
+     .pipe(gulp.dest('./dist/'))
+  })
+
+
+gulp.task('default',gulp.series('clean', gulp.parallel('copyfonts','copyblog','copytemp','imagemin','usemin'), 'copyy','copyyy', 'jekyll'));     //add copyfonts to this once you use fonts

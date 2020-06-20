@@ -55,26 +55,29 @@ a:hover{
     z-index: 999;
     .active{
         background-color: $background-jumbotron;
+        
     }
     .navbar-nav {
         a{
             margin: 5px;
+            
             color: $font-light;
         }
     }
     li:hover{
         background-color: $font-blue;
+       
     }
 }
 .nav-not-sm{
+    
     position:fixed;
-    //border-radius: 5px;
     width: 12%;
 }
 
 .nav-for-lg{
+    
     position:fixed;
-    //border-radius: 5px;
     width: 9%;
 }
 .nav-smol{
@@ -84,7 +87,7 @@ a:hover{
     top:100%;
     right:0%;
     width:100%;
-    border-radius: 0px;
+    
 }
 .vertical-center{
     display: flex;
@@ -149,6 +152,7 @@ hr {
   #alt-nav{
     top:0%;
     position: fixed;
+    text-align: right;
   }
 
 #title{
