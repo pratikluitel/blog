@@ -8,6 +8,7 @@ layout: default-index
                 <p href="{{ post.url }}" style="font-size: xx-large;">{{ post.title }}</p>
             </div>
             <div class="card-body">
+                    <img class="card-img-top" src="{{ post.image }}"/>
                     <p id="date">{{post.date | date: "%d %B %Y" }}</p>
                     <p>{{ post.highlight }} <span style="font-size: x-small; color:#22a39f">(Read)</span></p>
                 <a href="{{ post.url }}" class="stretched-link"></a>

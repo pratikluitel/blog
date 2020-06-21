@@ -9,6 +9,7 @@ a:hover {
   color: #59bab7; }
 
 .jumbotron {
+  font-family: "EB Garamond","Garamond","Georgia","Cambay",serif;
   padding: 0px;
   margin: 0px;
   min-height: 100%;
@@ -29,6 +30,9 @@ a:hover {
     border: #59bab7; }
   .jumbotron .btn-secondary:hover {
     background-color: #59bab7; }
+
+body {
+  font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif; }
 
 .nav {
   background-color: #222222;
@@ -131,6 +135,7 @@ hr {
   background-image: url("/img/personal/profile.jpg"); }
 
 .card {
+  overflow: hidden;
   padding: 10px;
   background-color: #f3efe0;
   margin-bottom: 20px; }
@@ -140,6 +145,17 @@ hr {
   .card #date {
     color: #434242;
     font-size: x-small; }
+  .card img {
+    display: block;
+    border-radius: 10px;
+    transition: transform .4s ease; }
 
-.card:hover {
-  box-shadow: 8px 12px 31px -10px; }
+.card:hover img {
+  transform: scale(1.05);
+  transform-origin: 50% 50%; }
+
+.card-img-top {
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
+  margin-bottom: 5px; }

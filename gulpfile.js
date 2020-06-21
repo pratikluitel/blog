@@ -57,7 +57,7 @@ gulp.task('copyblog',
 
 // Image compression
 gulp.task('imagemin', function() {
-   return gulp.src('img/**/*.{png,jpg,gif}')
+   return gulp.src('img/**/*.{png,jpg,jpeg,gif}')
      .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
      .pipe(gulp.dest('dist/img'));
  });
