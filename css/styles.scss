@@ -176,32 +176,55 @@ hr {
     background-image: url("/img/personal/profile.jpg");
 }
 .card{
-    overflow:hidden;
-    padding: 10px;
+    
     background-color: $feed-color;
-    margin-bottom: 20px;
-    .card-header{
+    margin-bottom: 30px;
+    .card-title{
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 10px;
         background-color: $feed-color;
         color: $background-jumbotron;
     }
-    #date{
-        color:#434242; 
-        font-size: x-small;
+    .card-body{
+        padding: 0px;
+        .imgcont{
+            #date{
+                font-size: small;
+                color: $font-light;
+                padding: 3px;
+                background-color: $background-jumbotron;
+            }
+            overflow: hidden;
+            img{
+                transition: transform .4s ease;
+            }
+        }
+        .card-content{
+            margin-left: 20px;
+            margin-right: 20px;
+            #date{
+                color:#434242; 
+                font-size: x-small;
+            }
+        }
     }
-    img{
-        display: block;
-        border-radius: 10px;
-        transition: transform .4s ease;
-    }
+    
 }
 .card:hover{
-    .card-header{
+    .card-title{
         color: $font-blue;
     }
-    img{
-        transform: scale(1.05);
-        transform-origin: 50% 50%;
+    .imgcont{
+        #date{
+            background-color: $font-blue;
+        }
+        img{
+            transform: scale(1.04);
+            transform-origin: 50% 50%;
+        }
     }
+    
 }
 .card-img-top {
     width: 100%;

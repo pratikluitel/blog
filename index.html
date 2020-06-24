@@ -4,13 +4,17 @@ layout: default-index
 <div class="col-sm-8 offset-sm-2" id="main">
         {% for post in site.posts%}
         <div class="card hoverable">
-            <div class="card-header">
-                <p href="{{ post.url }}" style="font-size: xx-large;">{{ post.title }}</p>
-            </div>
             <div class="card-body">
+                <div class="imgcont">
                     <img class="card-img-top" src="{{ post.image }}"/>
-                    <p id="date">{{post.date | date: "%d %B %Y" }}</p>
-                    <p>{{ post.highlight }} <span style="font-size: x-small; color:#22a39f">(Read)</span></p>
+                    <div id="date">{{post.date | date: "%d %B %Y" }}</div>
+                </div>
+                    <div class="card-title">
+                        <p href="{{ post.url }}" style="font-size: xx-large;">{{ post.title }}</p>
+                    </div>
+                    <div class="card-content">
+                    <p>{{ post.highlight }}</p>
+                    </div>  
                 <a href="{{ post.url }}" class="stretched-link"></a>
             </div>
         </div>
