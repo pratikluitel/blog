@@ -19,7 +19,7 @@ a{
 }
 a:hover{
     text-decoration: none;
-    color:$background-jumbotron;
+    color: #59bab7 * 1/0.75;
 }
 .jumbotron {
     font-family: "EB Garamond","Garamond","Georgia","Cambay",serif;
@@ -28,8 +28,24 @@ a:hover{
     min-height: 100%;
     min-height: 100vh;
     border-radius: 0px;
-    background-color: $background-jumbotron;
     color: $font-light;
+    background: no-repeat center right fixed url('/img/personal/jumbotron.jpeg');
+    background-size: cover;
+    #hd-jumbo{
+        z-index:2;
+    }
+    .overlay{
+        background-color: $font-blue;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        opacity: 0.75;
+        filter: alpha(opacity=75);
+        z-index: 0;
+    }
+    
     h1{
         font-size:60px
     }
