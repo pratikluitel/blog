@@ -16,7 +16,7 @@ a:hover {
   min-height: 100vh;
   border-radius: 0px;
   color: #ffffff;
-  background: no-repeat center right fixed url("/img/personal/jumbotron.jpeg");
+  background: no-repeat center center fixed url("/img/personal/jumbotron.jpeg");
   background-size: cover; }
   .jumbotron #hd-jumbo {
     z-index: 2; }
@@ -29,9 +29,9 @@ a:hover {
     right: 0px;
     opacity: 0.75;
     z-index: 0; }
-  .jumbotron h1 {
+  .jumbotron h2 {
     font-size: 60px; }
-  .jumbotron h4 {
+  .jumbotron h5 {
     font-weight: 1; }
   .jumbotron hr {
     margin-left: auto;
