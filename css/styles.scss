@@ -19,7 +19,7 @@ a{
 }
 a:hover{
     text-decoration: none;
-    color: #59bab7 * 1/0.75;
+    color: #59bab7 ;
 }
 .jumbotron {
     font-family: "EB Garamond","Garamond","Georgia","Cambay",serif;
@@ -42,7 +42,7 @@ a:hover{
         left: 0px;
         right: 0px;
         opacity: 0.75;
-        filter: alpha(opacity=75);
+        //filter: alpha(opacity=75);
         z-index: 0;
     }
     
