@@ -41,18 +41,18 @@ a:hover {
 @keyframes example {
   0% {
     background-color: #8bcbc9; }
-  66% {
+  50% {
     background-color: #59bab7; }
   100% {
     background-color: #8bcbc9; } }
   .jumbotron .btn-secondary {
     animation-name: example;
-    animation-duration: 2.5s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     border: #59bab7; }
   .jumbotron .btn-secondary:hover {
     animation-name: none;
-    background-color: #59bab7; }
+    background-color: lightseagreen; }
 
 body {
   font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif; }
@@ -90,6 +90,21 @@ body {
   display: flex;
   align-items: center; }
 
+#bloghead h1 {
+  color: #22a39f;
+  font-size: 45px; }
+
+#bloghead #blognav {
+  border-radius: 4px;
+  background-color: #59bab7; }
+  #bloghead #blognav a {
+    display: block;
+    color: white; }
+  #bloghead #blognav a:hover {
+    color: white; }
+  #bloghead #blognav .col-4:hover {
+    background-color: #22a39f; }
+
 hr {
   display: block;
   height: 1px;
@@ -103,7 +118,7 @@ hr {
   z-index: 9999 !important; }
 
 #main {
-  padding-top: 120px;
+  padding-top: 60px;
   padding-bottom: 80px; }
 
 #mainlist {

@@ -2,6 +2,23 @@
 layout: default-index
 ---
 <section class="Blog">
+    <div class="text-center" style="margin-top:100px; margin-bottom:30px" id="bloghead">
+        <h1><strong>Posts</strong></h1>
+        <br>
+        <div class="col-10 offset-1 col-sm-4 offset-sm-4" id="blognav">
+            <div class="row align-self-center">
+                <div class="col-4">
+                    <a href="#main">Stories</a>
+                </div>
+                <div class="col-4 text-center">
+                    <a href="#main">Essays</a>
+                </div>
+                <div class="col-4 text-center">
+                    <a href="#main">Poems</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="col-sm-8 offset-sm-2" id="main">
         {% for post in site.posts%}
         <div class="card hoverable">

@@ -59,19 +59,19 @@ a:hover{
     }
     @keyframes example {
         0%   {background-color:#8bcbc9;}
-        66% {background-color: $background-jumbotron;}
+        50% {background-color: $background-jumbotron;}
         100% {background-color:#8bcbc9;}
       }
     .btn-secondary{
         
         animation-name: example;
-        animation-duration: 2.5s;
+        animation-duration: 2s;
         animation-iteration-count: infinite;
         border: $background-jumbotron;
     }
     .btn-secondary:hover{
         animation-name:none;
-        background-color: $background-jumbotron;
+        background-color: lightseagreen;
     }
     
 }
@@ -123,6 +123,26 @@ body{
     display: flex;
     align-items: center;
 }
+#bloghead{
+    h1{
+        color:#22a39f;
+        font-size: 45px;
+    }
+    #blognav{
+        border-radius: 4px;
+        background-color: $background-jumbotron;
+        a{
+            display:block;
+            color:white;
+        }
+        a:hover{
+            color: white;
+        }
+        .col-4:hover{
+            background-color: $font-blue;
+        }
+    }
+}
 hr {
     display: block; 
     height: 1px;
@@ -137,11 +157,11 @@ hr {
   }
 
 #main{
-    padding-top: 120px;
+    padding-top: 60px;
     padding-bottom: 80px;
 }
 #mainlist{
-        list-style-type: none;
+    list-style-type: none;
 }
 
 .footer{
