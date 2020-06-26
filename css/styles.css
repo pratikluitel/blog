@@ -37,10 +37,21 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     border-top: 1px solid #8bcbc9; }
+
+@keyframes example {
+  0% {
+    background-color: #8bcbc9; }
+  66% {
+    background-color: #59bab7; }
+  100% {
+    background-color: #8bcbc9; } }
   .jumbotron .btn-secondary {
-    background-color: #8bcbc9;
+    animation-name: example;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
     border: #59bab7; }
   .jumbotron .btn-secondary:hover {
+    animation-name: none;
     background-color: #59bab7; }
 
 body {

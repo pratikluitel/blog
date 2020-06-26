@@ -57,13 +57,23 @@ a:hover{
         margin-right: auto;
         border-top: 1px solid #8bcbc9;
     }
+    @keyframes example {
+        0%   {background-color:#8bcbc9;}
+        66% {background-color: $background-jumbotron;}
+        100% {background-color:#8bcbc9;}
+      }
     .btn-secondary{
-        background-color:#8bcbc9;
+        
+        animation-name: example;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
         border: $background-jumbotron;
     }
     .btn-secondary:hover{
+        animation-name:none;
         background-color: $background-jumbotron;
     }
+    
 }
 body{
     font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
