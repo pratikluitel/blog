@@ -104,7 +104,7 @@ body {
       display: block;
       color: white; }
     #bloghead #blognav a:hover {
-      color: white; }
+      color: #fffffff1; }
     #bloghead #blognav .col-4:hover {
       background-color: #22a39f; }
 
