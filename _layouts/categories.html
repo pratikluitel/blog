@@ -33,21 +33,35 @@ layout: default
         </ul>
     </nav>
 </div>
-<section class="Blog">
-    <div id="main" class="container-fluid">
+<section class="Blog"  id="main">
+    <div class="text-center" id="bloghead">
+        <h1><strong>{{page.title}}</strong></h1>
+        <br>
+        <div class="col-10 offset-1 col-sm-4 offset-sm-4" id="blognav">
+            {{content}}
+        </div>
+    </div>
+    <div class="col-sm-8 offset-sm-2">
         <div class="row">
-            <div class="col-10 col-md-8 offset-1 offset-md-2">
-                <div class="row row-header justify-content-center" style="margin-top: 60px" id="title">
-                    <h1><strong>{{ page.title }}</strong></h1>
+            {% for post in site.categories[page.title]%}
+            <div class="col-md-6">
+                <div class="card hoverable">
+                    <div class="card-body">
+                        <div class="imgcont">
+                            <img class="card-img-top" src="{{ post.image }}"/>
+                            <div id="date">{{post.date | date: "%d %B %Y" }}</div>
+                        </div>
+                            <div class="card-title">
+                                <p href="{{ post.url }}" style="font-size: xx-large;">{{ post.title }}</p>
+                            </div>
+                            <div class="card-content">
+                                <p>{{ post.highlight }}</p>
+                            </div>  
+                            <a href="{{ post.url }}" class="stretched-link"></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="row justify-content-center">
-                    <img src="{{ page.image }}" width=90% style="margin-bottom: 5px;">
-                    <p class="caption" style="color:#434242; font-size: x-small; text-align: right; width: 100%;">{{ page.caption }}</p>
-                </div>
-                <div class="row row-content">
-                    {{ content }}
-                </div>
-            </div>
+            {%endfor %}
         </div>
     </div>
 </section>

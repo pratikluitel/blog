@@ -78,15 +78,15 @@ a:hover{
 body{
     font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
 }
+.active{
+    background-color: $background-jumbotron;
+    
+}
 .nav {
     background-color:$background-darker;
     top: 30%;
     right: 4%;
     z-index: 999;
-    .active{
-        background-color: $background-jumbotron;
-        
-    }
     .navbar-nav {
         a{
             margin: 5px;
@@ -124,13 +124,15 @@ body{
     align-items: center;
 }
 #bloghead{
+    margin-top:100px; 
+    margin-bottom:80px;
     h1{
         color:#22a39f;
         font-size: 45px;
     }
     #blognav{
         border-radius: 4px;
-        background-color: $background-jumbotron;
+        background-color: $background-dark;
         a{
             display:block;
             color:white;
@@ -157,7 +159,6 @@ hr {
   }
 
 #main{
-    padding-top: 60px;
     padding-bottom: 80px;
 }
 #mainlist{
