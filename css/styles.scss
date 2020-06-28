@@ -10,6 +10,16 @@ $font-blue: #22a39f;
 $font-family-sans-serif: "Arial";
 $feed-color:#f3efe0;
 
+@media (max-width: 768px) {
+    #conttt{
+        font-size: 16px;
+    }
+}
+@media (min-width: 768px){
+    #conttt{
+        font-size: 18px;
+    }
+}
 html{
     scroll-behavior: smooth;
 }
@@ -280,11 +290,4 @@ hr {
     object-fit: cover;
     margin-bottom: 5px;
 }
-@media only screen and (max-width: 900px) {
-    #conttt{
-        font-size: 16px;
-    }
-}
-#conttt{
-    font-size: 18px;
-}
+
