@@ -36,15 +36,15 @@ layout: default
 <section class="Blog">
     <div id="main" class="container-fluid">
         <div class="row">
-            <div class="col-10 col-md-8 offset-1 offset-md-2">
-                <div class="row row-header justify-content-center" style="margin-top: 60px" id="title">
+            <div class="col-10 col-md-6 offset-1 offset-md-3">
+                <div class="row row-header justify-content-center" style="margin-top: 100px" id="title">
                     <h1><strong>{{ page.title }}</strong></h1>
                 </div>
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" style="margin-bottom: 10px;" >
                     <img src="{{ page.image }}" width=90% style="margin-bottom: 5px;">
                     <p class="caption" style="color:#434242; font-size: x-small; text-align: right; width: 100%;">{{ page.caption }}</p>
                 </div>
-                <div class="row row-content">
+                <div class="row row-content" id="conttt">
                     {{ content }}
                 </div>
             </div>

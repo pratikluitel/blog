@@ -216,3 +216,10 @@ hr {
   height: 20vw;
   object-fit: cover;
   margin-bottom: 5px; }
+
+@media only screen and (max-width: 900px) {
+  #conttt {
+    font-size: 16px; } }
+
+#conttt {
+  font-size: 18px; }
