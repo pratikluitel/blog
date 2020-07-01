@@ -70,7 +70,6 @@ gulp.task('usemin', function() {
       return stream
    .pipe(usemin({
          css: [ rev() ],
-         html: [ htmlmin() ],
          js: [ uglify(), rev() ],
          inlinejs: [ uglify() ],
          inlinecss: [ cleanCss(), 'concat' ]
