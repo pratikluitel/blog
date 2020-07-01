@@ -4,7 +4,7 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     del = require('del'),
-    browserSync = require('browser-sync'),
+    //browserSync = require('browser-sync'),
     imagemin = require('gulp-imagemin'),
     uglify = require('gulp-uglify'),
     usemin = require('gulp-usemin'),
@@ -12,7 +12,7 @@ var gulp = require('gulp'),
     cleanCss = require('gulp-clean-css'),
     flatmap = require('gulp-flatmap'),
     htmlmin = require('gulp-htmlmin'),
-    exec = require('gulp-exec'),
+    //exec = require('gulp-exec'),
     run =require('gulp-run-command').default;
 
 //definition of the sass task, compiles the scss in /css/scss
@@ -70,7 +70,7 @@ gulp.task('usemin', function() {
       return stream
    .pipe(usemin({
          css: [ rev() ],
-         
+         html: [ htmlmin() ],
          js: [ uglify(), rev() ],
          inlinejs: [ uglify() ],
          inlinecss: [ cleanCss(), 'concat' ]
@@ -94,8 +94,12 @@ gulp.task('copyyy',
 
   gulp.task('copytemp', function(){
      return gulp.src('./*.html')
-     .pipe(gulp.dest('./dist/'))
+     .pipe(gulp.dest('./dist/'));
+  })
+  gulp.task('copyicon', function(){
+    return gulp.src('*.png')
+    .pipe(gulp.dest('dist/'));
   })
 
-gulp.task('build',gulp.series('clean', gulp.parallel('copyfonts','copyblog','copytemp','imagemin','usemin'), 'copyy','copyyy'));
+gulp.task('build',gulp.series('clean', gulp.parallel('copyfonts','copyblog','copytemp','imagemin','usemin'), 'copyy','copyyy','copyicon'));
 gulp.task('default',gulp.series('build', gulp.parallel('watch','jekyll')));
