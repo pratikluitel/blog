@@ -99,6 +99,11 @@ gulp.task('copyyy',
     return gulp.src('*.png')
     .pipe(gulp.dest('dist/'));
   })
+  gulp.task('copyname', function(){
+    return gulp.src('CNAME')
+    .pipe(gulp.dest('dist/'));
+  })
 
-gulp.task('build',gulp.series('clean', gulp.parallel('copyfonts','copyblog','copytemp','imagemin','usemin'), 'copyy','copyyy','copyicon'));
+
+gulp.task('build',gulp.series('clean', gulp.parallel('copyfonts','copyblog','copytemp','imagemin','usemin'), 'copyy','copyyy','copyicon','copyname'));
 gulp.task('default',gulp.series('build', gulp.parallel('watch','jekyll')));
