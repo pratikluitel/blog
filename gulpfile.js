@@ -40,6 +40,8 @@ gulp.task('clean', function(cb) {
 gulp.task('copy', function() {
   var fonts = gulp.src('./node_modules/font-awesome/fonts/**/*.{ttf,woff,eof,svg}*')
   .pipe(gulp.dest('./dist/fonts'));
+  var includes = gulp.src('./_includes/*.html')
+  .pipe(gulp.dest('./dist/_includes'));
   var blog = gulp.src('./_posts/*')
   .pipe(gulp.dest('./dist/_posts'));
   var html = gulp.src('./*.html')
@@ -53,7 +55,7 @@ gulp.task('copy', function() {
   var cname = gulp.src('CNAME')
   .pipe(gulp.dest('dist/'));
 
- return merge(fonts,blog,html,css,js,icon,cname);
+ return merge(fonts,includes,blog,html,css,js,icon,cname);
 });
 
 // Image compression

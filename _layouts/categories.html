@@ -59,6 +59,9 @@ layout: default
                             <div class="card-content">
                                 <p>{{ post.highlight }}</p>
                             </div>  
+                            <div class="card-content" style="color:grey; font-size: small;">
+                                <p>{% include read_time.html %}</p>
+                            </div>
                             <a href="{{ post.url }}" class="stretched-link"></a>
                         </div>
                     </div>
