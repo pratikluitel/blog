@@ -54,32 +54,37 @@ layout: default
                 <br>
             </div>
         </div>
-        <div class="row row-content" style="padding-top: 25px; padding-bottom: 40px; background-color: #f3efe0;">
+        <div class="row row-content" style="margin-top: 50px;padding-top: 25px; padding-bottom: 40px; background-color: #f3efe0;">
             <div class="col-10 col-md-8 offset-1 offset-md-2">
-                    <h4 style="color: lightseagreen;"><strong>More Posts</strong></h4>
-                    <hr>
+                <h4 style="color: lightseagreen;"><strong>More Posts</strong></h4>
+                <hr>
                 <div class="row">
+                    {% assign count = 0 %}
                     {% for post in site.posts%}
                         {% if post.featured == true and post.title != page.title%}
-                        <div class="col-md-6">
-                            <div class="card hoverable" style="background-color: whitesmoke;">
-                                <div class="card-body">
-                                    <div class="imgcont">
-                                        {% if post.image != nil %}
-                                            <img class="card-img-top" src="{{ post.image }}"/>
-                                        {% endif %}
-                                        <div id="date">{{post.date | date: "%d %B %Y" }}</div>
+                            {% assign count = count | plus: 1 %}
+                            <div class="col-md-6">
+                                <div class="card hoverable" style="background-color: whitesmoke;">
+                                    <div class="card-body">
+                                        <div class="imgcont">
+                                            {% if post.image != nil %}
+                                                <img class="card-img-top" src="{{ post.image }}"/>
+                                            {% endif %}
+                                            <div id="date">{{post.date | date: "%d %B %Y" }}</div>
+                                        </div>
+                                        <div class="card-title" style="padding-bottom: 0px; background-color: whitesmoke;">
+                                            <p href="{{ post.url }}" style="font-size: xx-large;">{{ post.title }}</p>
+                                        </div>
+                                        <div class="card-content" style="color:grey; font-size: small;">
+                                            <p>{% include read_time.html %}</p>
+                                        </div>
+                                        <a href="{{ post.url }}" class="stretched-link"></a>
                                     </div>
-                                    <div class="card-title" style="padding-bottom: 0px; background-color: whitesmoke;">
-                                        <p href="{{ post.url }}" style="font-size: xx-large;">{{ post.title }}</p>
-                                    </div>
-                                    <div class="card-content" style="color:grey; font-size: small;">
-                                        <p>{% include read_time.html %}</p>
-                                    </div>
-                                    <a href="{{ post.url }}" class="stretched-link"></a>
                                 </div>
                             </div>
-                        </div>
+                        {% endif %}
+                        {% if count > 1 %}
+                            {% break %}
                         {% endif %}
                     {%endfor %}
                 </div>
