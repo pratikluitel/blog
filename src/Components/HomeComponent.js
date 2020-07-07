@@ -1,14 +1,19 @@
 import React, {Component} from 'react';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
+import Navigation from './NavComponent';
 
-function Home() {
-  return (
-    <>
-      <Header />
-      <Footer />
-    </>
-  );
+class Home extends Component {
+    
+    render(){
+        return (
+            <>
+              <Header />
+              <Navigation />
+              <Footer />
+            </>
+        );
+    }
 }
 
 export default Home;
