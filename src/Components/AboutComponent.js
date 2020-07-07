@@ -10,7 +10,7 @@ function About(){
           <title>About -- Pratik Luitel</title>
         </Helmet>
         <Navigation/>
-        <div class="About">
+        <section class="About">
             <div id="main" class="container" style={{marginTop:80+'px'}}>
                 <div class="row">
                     <div class="col-10 col-sm-8 offset-1 offset-sm-2">
@@ -48,7 +48,7 @@ function About(){
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <Footer/>
         </>
     );

@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer(){
     return(
-        <div className="Contact">
+        <section className="Contact">
             <div className="footer" id="contact">
                 <div className="container">
                     <div className="row">
@@ -15,16 +15,16 @@ function Footer(){
                                 <div className="col-12 col-sm-6">
                                     <ul>
                                         <li>
-                                            <a href="mailto:pluitel11@gmail.com" target="_blank">
+                                            <a href="mailto:pluitel11@gmail.com" target="_blank" rel="noopener noreferrer">
                                                 <span className="fa fa-envelope"></span>&emsp;&emsp;Gmail</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.linkedin.com/in/pratik-luitel-639a58175/" target="_blank">
+                                            <a href="https://www.linkedin.com/in/pratik-luitel-639a58175/" target="_blank" rel="noopener noreferrer">
                                                 <span className="fa fa-linkedin"></span>&emsp;&emsp;
                                                 Linkedin</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.goodreads.com/user/show/54605032-pratik-luitel" target="_blank">
+                                            <a href="https://www.goodreads.com/user/show/54605032-pratik-luitel" target="_blank" rel="noopener noreferrer">
                                                 <span className="icon-stack">
                                                     <i className="icon-sign-blank icon-stack-base"></i>
                                                     <i className="icon-light">
@@ -40,15 +40,15 @@ function Footer(){
                                 <div className="col col-sm">
                                     <ul>
                                         <li>
-                                            <a href="https://www.github.com/pratikluitel" target="_blank">
+                                            <a href="https://www.github.com/pratikluitel" target="_blank" rel="noopener noreferrer">
                                                 <span className="fa fa-github"></span>&emsp;&emsp;&#8239;Github</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.twitter.com/pratikHluitel" target="_blank">
+                                            <a href="https://www.twitter.com/pratikHluitel" target="_blank" rel="noopener noreferrer">
                                                 <span className="fa fa-twitter"></span>&emsp;&emsp;&#8239;Twitter</a>
                                         </li>
                                         <li>
-                                            <a href="https://soundcloud.com/pratik_luitel" target="_blank">
+                                            <a href="https://soundcloud.com/pratik_luitel" target="_blank" rel="noopener noreferrer">
                                                 <span className="fa fa-soundcloud"></span>&emsp;&#8239;
                                                 Soundcloud</a>
                                         </li>
@@ -64,7 +64,7 @@ function Footer(){
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

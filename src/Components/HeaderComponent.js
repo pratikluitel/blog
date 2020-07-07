@@ -2,7 +2,7 @@ import React from 'react';
 
 function Header(){
     return(
-        <div className="Home">
+        <section className="Home">
             <div className="jumbotron vertical-center" id="#home">
                 <div className="overlay"></div>
                 <div className="container">
@@ -35,7 +35,7 @@ function Header(){
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 
