@@ -1,9 +1,11 @@
 import React from 'react';
 import Footer from './FooterComponent';
+import Navigation from './NavComponent';
 
 function About(){
     return(
         <>
+        <Navigation/>
         <div class="About">
             <div id="main" class="container" style={{marginTop:80+'px'}}>
                 <div class="row">
