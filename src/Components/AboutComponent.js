@@ -1,10 +1,14 @@
 import React from 'react';
 import Footer from './FooterComponent';
 import Navigation from './NavComponent';
+import {Helmet} from 'react-helmet';
 
 function About(){
     return(
         <>
+        <Helmet>
+          <title>About -- Pratik Luitel</title>
+        </Helmet>
         <Navigation/>
         <div class="About">
             <div id="main" class="container" style={{marginTop:80+'px'}}>
