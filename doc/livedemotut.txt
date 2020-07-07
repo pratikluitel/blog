@@ -1,5 +1,0 @@
-1. to see live demo on the browser, simply:
-$ gulp
-
-2. To prepare the distribution files:
-$ gulp build
