@@ -112,7 +112,7 @@
       color: #22a39f;
       font-size: 45px; }
     #bloghead #blognav {
-      border-radius: 4px;
+      border-radius: 0px;
       background-color: #434242; }
       #bloghead #blognav a {
         display: block;

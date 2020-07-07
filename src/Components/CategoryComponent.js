@@ -1,15 +1,13 @@
 import React, {Component} from 'react';
-import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Navigation from './NavComponent';
 import PostList from './PostsListComponent';
 
-class Home extends Component {
+class Category extends Component {
     render(){
         return (
             <>
-                <Navigation typenav='nav'/>
-                <Header />
+                <Navigation />
                 <PostList />
                 <Footer />
             </>
@@ -17,4 +15,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default Category;
