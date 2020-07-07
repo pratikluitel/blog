@@ -49,7 +49,7 @@ class PostList extends Component{
                                         <div className="card-content" style={{color:'grey', fontSize: 'small'}}>
                                             <p>Read time</p>
                                         </div>
-                                        <a href="url" className="stretched-link"></a>
+                                        <a href="url" className="stretched-link"> </a>
                                     </div>
                                 </div>
                             </div>
