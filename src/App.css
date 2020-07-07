@@ -78,7 +78,9 @@
     right: 4%;
     z-index: 999; }
     .nav .navbar-nav a {
-      margin: 5px;
+      display: block;
+      margin: 0px;
+      padding:13px;
       color: #ffffff; }
     .nav li:hover {
       background-color: #22a39f; }

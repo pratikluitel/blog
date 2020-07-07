@@ -8,8 +8,7 @@ class Navigation extends Component{
         super(props);
         this.state={
             isNavOpen: false,
-            typenav: this.props.typenav,
-            page: this.props.page
+            typenav: this.props.typenav
         }
         this.toggleNav = this.toggleNav.bind(this);
     }
