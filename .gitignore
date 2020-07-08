@@ -1,10 +1,9 @@
-dist
 insp
 img
 blog
 _posts/*
 post-temp.md
-CNAME# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+CNAME
 
 # dependencies
 /node_modules
@@ -16,6 +15,7 @@ CNAME# See https://help.github.com/articles/ignoring-files/ for more about ignor
 
 # production
 /build
+dist
 
 # misc
 .DS_Store
