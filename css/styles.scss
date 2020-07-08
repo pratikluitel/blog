@@ -1,0 +1,299 @@
+$background-jumbotron : #59bab7;
+$background-light:#f3efe0;
+$background-lighter: #ffffff;
+$background-dark: #434242;
+$background-darker: #222222;
+$font-light: #ffffff;
+$font-dark:#bebebe;
+$font-darker: #434242;
+$font-blue: #22a39f;
+$font-family-sans-serif: "Arial";
+$feed-color:#f3efe0;
+
+@media (max-width: 500px) {
+    #conttt{
+        font-size: 16px;
+    }
+}
+@media (min-width: 500px) and (max-width:900px){
+    #conttt{
+        font-size: 18px;
+    }
+}
+@media (min-width: 900px){
+    #conttt{
+        font-size: 20px;
+    }
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    color:$font-blue;
+    
+}
+a:hover{
+    text-decoration: none;
+    color: #59bab7 ;
+}
+.jumbotron {
+    font-family: "EB Garamond","Garamond","Georgia","Cambay",serif;
+    padding:0px;
+    margin:0px;
+    min-height: 100%;
+    min-height: 100vh;
+    border-radius: 0px;
+    color: $font-light;
+    background: no-repeat center center fixed url('/img/personal/jumbotron.jpeg');
+    background-size: cover;
+    #hd-jumbo{
+        z-index:2;
+    }
+    .overlay{
+        background-color: $font-blue;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        opacity: 0.75;
+        //filter: alpha(opacity=75);
+        z-index: 0;
+    }
+    
+    h2{
+        font-size:60px
+    }
+    h5{
+        font-weight: 1; //change this
+    }
+    hr{
+        margin-left:auto; 
+        margin-right: auto;
+        border-top: 1px solid #8bcbc9;
+    }
+    @keyframes example {
+        0%   {background-color:#8bcbc9;}
+        50% {background-color: $background-jumbotron;}
+        100% {background-color:#8bcbc9;}
+      }
+    .btn-secondary{
+        
+        animation-name: example;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        border: $background-jumbotron;
+    }
+    .btn-secondary:hover{
+        animation-name:none;
+        background-color: lightseagreen;
+    }
+    
+}
+body{
+    font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+.active{
+    background-color: $background-jumbotron;
+    
+}
+.nav {
+    background-color:$background-darker;
+    top: 34%;
+    right: 4%;
+    z-index: 999;
+    .navbar-nav {
+        a{
+            padding: 13px;
+            
+            color: $font-light;
+        }
+    }
+    li:hover{
+        background-color: $font-blue;
+       
+    }
+}
+.nav-not-sm{
+    
+    position:fixed;
+    width: 12%;
+}
+
+.nav-for-lg{
+    
+    position:fixed;
+    width: 9%;
+}
+.nav-smol{
+    padding-top:15px;
+    padding-bottom:15px;
+    position: absolute;
+    top:100%;
+    right:0%;
+    width:100%;
+    
+}
+.vertical-center{
+    display: flex;
+    align-items: center;
+}
+#bloghead{
+    margin-top:100px; 
+    margin-bottom:80px;
+    h1{
+        color:#22a39f;
+        font-size: 45px;
+    }
+    #blognav{
+        border-radius: 0px;
+        background-color: $background-dark;
+        a{
+            display:block;
+            color:white;
+        }
+        a:hover{
+            display: block;
+            color: #fffffff1;
+        }
+        .col-4:hover{
+
+            background-color: $font-blue;
+        }
+    }
+}
+hr {
+    display: block; 
+    height: 1px;
+    border: 1; 
+    margin: 1em 0; 
+    padding: 0;
+}
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+  }
+
+#main{
+    padding-bottom: 80px;
+}
+#mainlist{
+    list-style-type: none;
+}
+
+.footer{
+    margin:0px;
+    padding:100px 0px 100px 0px;
+    background-color: $background-dark;
+    color: $font-dark;
+    hr{
+        border-top: 1px solid #6c7272;
+    }
+    .row-header{
+        padding:20px
+    }
+    ul li{
+        list-style-type: none;
+        margin-bottom: 20px;
+    }
+    a {
+        color:$font-dark;
+        text-decoration: none;
+    }
+    a:hover{
+        color:$font-light;
+    }
+    .fa{
+        font-size: xx-large;
+    }
+}
+
+#contactlinks{
+    padding:30px;
+}
+#nav {
+    text-align: right;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  #alt-nav{
+    top:0%;
+    position: fixed;
+    text-align: right;
+  }
+
+#title{
+    text-align: center;
+    color:$font-blue;
+    padding-bottom: 60px;
+}
+
+.author-pic{
+    width:300px;
+    height: 300px;
+    border-radius: 150px 150px 0px 150px;
+    margin-top: 40px;
+    background-image: url("/img/personal/profile.jpg");
+}
+.card{
+    
+    background-color: $feed-color;
+    margin-bottom: 30px;
+    .card-title{
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 10px;
+        background-color: $feed-color;
+        color: $background-jumbotron;
+    }
+    .card-body{
+        padding: 0px;
+        .imgcont{
+            #date{
+                font-size: small;
+                color: $font-light;
+                padding: 3px;
+                background-color: $background-jumbotron;
+            }
+            overflow: hidden;
+            img{
+                transition: transform .4s ease;
+            }
+        }
+        .card-content{
+            margin-left: 20px;
+            margin-right: 20px;
+            #date{
+                color:#434242; 
+                font-size: x-small;
+            }
+        }
+    }
+    
+}
+.card:hover{
+    .card-title{
+        color: $font-blue;
+    }
+    .imgcont{
+        #date{
+            background-color: $font-blue;
+        }
+        img{
+            transform: scale(1.04);
+            transform-origin: 50% 50%;
+        }
+    }
+    
+}
+.card-img-top {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+

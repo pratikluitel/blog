@@ -1,0 +1,94 @@
+---
+layout: default
+---
+<div class="container-fluid" id="#navigation">
+    <nav class="nav nav-sm nav-smol nav-justified d-block d-md-none" id="alt-nav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar" style="color:white">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="Navbar">
+            <ul class="navbar-nav menu">
+                <li class="nav-item Home-marker"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item Blog-marker active"><a class="nav-link" href="/#main">Blog</a></li>
+                <li class="nav-item Contact-marker"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="nav nav-sm nav-not-sm nav-justified d-none d-md-block d-lg-none" style="position: absolute;">
+        <ul class="navbar-nav menu">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item Blog-marker active"><a class="nav-link" href="/#main">Blog</a></li>
+            <li class="nav-item Contact-marker"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+        </ul>
+    </nav>
+    <nav class="nav nav-sm nav-for-lg nav-justified d-none d-lg-block" style="position: absolute;">
+        <ul class="navbar-nav menu">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item Blog-marker active"><a class="nav-link" href="/#main">Blog</a></li>
+            <li class="nav-item Contact-marker"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+        </ul>
+    </nav>
+</div>
+<section class="Blog">
+    <div id="main" class="container-fluid" style="padding-bottom: 0px;">
+        <div class="row">
+            <div class="col-10 col-md-8 col-lg-6 offset-1 offset-md-2 offset-lg-3">
+                <div class="row row-header justify-content-center" style="margin-top: 100px" id="title">
+                    <h1><strong>{{ page.title }}</strong></h1>
+                </div>
+                <div class="row justify-content-center" style="margin-bottom: 10px;" >
+                    <img src="{{ page.image }}" width=90% style="margin-bottom: 5px;">
+                    <p class="caption" style="color:#434242; font-size: x-small; text-align: right; width: 90%;">{{ page.caption }}</p>
+                </div>
+                <div class="row row-content" id="conttt">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10 col-md-6 offset-1 offset-md-3">
+                <br>
+            </div>
+        </div>
+        <div class="row row-content" style="margin-top: 50px;padding-top: 25px; padding-bottom: 40px; background-color: #f3efe0;">
+            <div class="col-10 col-md-8 offset-1 offset-md-2">
+                <h4 style="color: lightseagreen;"><strong>More Posts</strong></h4>
+                <hr>
+                <div class="row">
+                    {% assign count = 0 %}
+                    {% for post in site.posts%}
+                        {% if post.featured == true and post.title != page.title%}
+                            {% assign count = count | plus: 1 %}
+                            <div class="col-md-6">
+                                <div class="card hoverable" style="background-color: whitesmoke;">
+                                    <div class="card-body">
+                                        <div class="imgcont">
+                                            {% if post.image != nil %}
+                                                <img class="card-img-top" src="{{ post.image }}"/>
+                                            {% endif %}
+                                            <div id="date">{{post.date | date: "%d %B %Y" }}</div>
+                                        </div>
+                                        <div class="card-title" style="padding-bottom: 0px; background-color: whitesmoke;">
+                                            <p href="{{ post.url }}" style="font-size: xx-large;">{{ post.title }}</p>
+                                        </div>
+                                        <div class="card-content" style="color:grey; font-size: small;">
+                                            <p>{% include read_time.html %}</p>
+                                        </div>
+                                        <a href="{{ post.url }}" class="stretched-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if count > 1 %}
+                            {% break %}
+                        {% endif %}
+                    {%endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

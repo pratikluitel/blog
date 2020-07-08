@@ -1,0 +1,31 @@
+SETTING UP NODE ENVIRONMENT
+1. install nodejs and npm
+2. npm init in the project folder
+3. Initialize npm — 
+$ npm init
+
+SETTING UP A WEBSERVER TO SERVE UP CONTENT AND RESPOND DYNAMICALLY USING GULP
+
+4. If you don't have gulp, install gulp  globally 
+$ sudo npm install -g gulp-cli
+
+5. Now install gulp locally using save-dev so it is added to package.json
+$ npm install --save-dev gulp-cli
+
+6. Install gulp-sass (dynamically compiles scss to css) and browser-sync (name is evident I think) using npm (locally)
+7. Install del(to delete/clean the distribution(dist) folder), gulp-imagemin(to reduce image size), 
+gulp-uglify (uglifies js code, removes spaces to reduce overhead), gulp-clean-css(does same but for css),gulp-htmlmin(same for html),gulp-usemin (combines all js, css files into html to reduce space), gulp-flatmap, gulp-rev(adds hashes to filenames so cached pages don't cause conflict) through npm locally
+
+$ npm install gulp-uglify gulp-usemin gulp-rev gulp-clean-css gulp-flatmap gulp-htmlmin --save-dev
+
+
+WRITING A GULP FILE
+
+8. See gulpfile.js and comments for more info.
+
+INSTALLING BOOTSTRAP
+
+9. you need jquery and popper.js too
+$npm install bootstrap jquery popper.js --save
+
+10. !Profit???
