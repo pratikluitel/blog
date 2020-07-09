@@ -11,7 +11,7 @@
 
 1.  **Make sure you have nodejs, npm and gatsby installed**
 
-  For installation, consult: (node) https://nodejs.org/en/, (npm) https://www.npmjs.com/, (gatsby) https://www.gatsbyjs.org/
+    For installation, consult: (node) https://nodejs.org/en/, (npm) https://www.npmjs.com/, (gatsby) https://www.gatsbyjs.org/
 
 1.  **clone the repo**
 
