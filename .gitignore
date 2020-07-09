@@ -1,9 +1,9 @@
 #folders
 _posts/
 dist/
-src/blog/essays
-src/blog/poems
-src/blog/stories
+src/essays
+src/poems
+src/stories
 
 # Logs
 logs
