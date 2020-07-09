@@ -20,6 +20,7 @@
     ```
 
 1.  **Install dependencies**
+    
     look at `package.json` for the list, install using
     `yarn [dependency name]`
 
