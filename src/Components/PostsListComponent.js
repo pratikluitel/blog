@@ -72,9 +72,9 @@ export default function PostList(){
                 <div className="row">
                     {data.allMarkdownRemark.edges.map(
                         ({node})=>(
-                            node.frontmatter.featured !== true ? <div className="col-md-6">{RenderCard({node})}</div>
+                            node.frontmatter.featured !== true ? <div className="col-md-6" key={node.id}>{RenderCard({node})}</div>
                                 :
-                                <div className="col-md-12">{RenderCard({node})}</div>
+                                <div className="col-md-12" key={node.id}>{RenderCard({node})}</div>
                         ))}
                 </div>
             </div>
