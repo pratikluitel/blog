@@ -19,13 +19,17 @@
     git clone https://github.com/pratikluitel/site-meta
     ```
 
+1.  **Install dependencies**
+    look at `package.json` for the list, install using
+    `yarn [dependency name]`
+
 1.  **run the local server**
 
     ```shell
     gatsby develop
     ```
 
-    The site is now running at `http://localhost:8000`!
+    The site is now running at `http://localhost:8000`
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying data. 
     Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
