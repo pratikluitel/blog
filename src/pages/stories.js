@@ -55,7 +55,7 @@ export default function Stories() {
       <Layout>
         <Helmet>
           <title>Stories -- Pratik Luitel</title>
-          <link rel="canonical" href="http://pratikl.com.np/essays" />
+          <link rel="canonical" href="http://pratikl.com.np/stories" />
         </Helmet>
         <Navigation/>
         <section className="Blog"  id="main">
@@ -65,13 +65,13 @@ export default function Stories() {
                 <div className="col-10 offset-1 col-sm-6 offset-sm-3 col-md-4 offset-md-4" id="blognav">
                     <div className="row align-self-center">
                         <div className="col-4 active">
-                            <a href="/stories" className="stretched-link">Stories</a>
+                            <Link to="/stories" className="stretched-link">Stories</Link>
                         </div>
                         <div className="col-4">
-                            <a href="/essays" className="stretched-link">Essays</a>
+                            <Link to="/essays" className="stretched-link">Essays</Link>
                         </div>
                         <div className="col-4">
-                            <a href="/poems" className="stretched-link">Poems</a>
+                            <Link to="/poems" className="stretched-link">Poems</Link>
                         </div>
                     </div>
                 </div>
