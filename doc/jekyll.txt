@@ -1,5 +1,0 @@
-1. install jekyll
-2. install gulp-run-command npm package locally
-3. see gulpfile.js for more info
-4. for serving the blog simply type:
-$ gulp
