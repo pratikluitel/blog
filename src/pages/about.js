@@ -2,10 +2,15 @@ import React from "react"
 import Layout from '../Components/layout'
 import Navigation from '../Components/NavComponent'
 import {Link} from 'gatsby';
+import {Helmet} from 'react-helmet';
 
 export default function About() {
   return (
     <Layout>
+      <Helmet>
+        <title>About -- Pratik Luitel</title>
+        <link rel="canonical" href="http://pratikl.com.np/about" />
+      </Helmet>
       <Navigation/>
       <section class="About">
         <div id="main" class="container" style={{marginTop:80+'px'}}>
