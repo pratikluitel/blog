@@ -60,7 +60,7 @@ function Footer(){
                     </div>
                     <br/>
                     <div className="row row-content justify-content-center">
-                        <p>&#169; Pratik Luitel, 2020</p>
+                        <p style={{fontSize:'small'}}>Built with <a href="https://www.gatsbyjs.org/"><u>GatsbyJs</u></a>, some <a href="https://graphql.org/"><u>GraphQL</u></a>, and a lot of <a href="https://en.wikipedia.org/wiki/Pain"><u>love</u></a></p>
                     </div>
                 </div>
             </div>

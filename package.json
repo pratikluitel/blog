@@ -2,8 +2,8 @@
   "name": "personal-blog-pratik",
   "private": true,
   "description": "A personal blog",
-  "version": "0.1.0",
-  "license": "0BSD",
+  "version": "1.0.0",
+  "license": "",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -17,6 +17,7 @@
     "bootstrap": "^4.5.0",
     "font-awesome": "^4.7.0",
     "gatsby": "^2.23.12",
+    "gatsby-plugin-manifest": "^2.4.18",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-source-filesystem": "^2.3.18",
     "gatsby-transformer-remark": "^2.8.23",

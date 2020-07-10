@@ -13,7 +13,7 @@ export default function Post({data}) {
                 <title>{post.frontmatter.title} -- Pratik Luitel</title>
                 <link rel="canonical" href={`http://pratikl.com.np/${post.fields.slug}`} />
             </Helmet>
-            <Navigation/>
+            <Navigation isPostPage= {true} />
             <section className="Blog">
                 <div id="main" className="container-fluid" style={{paddingBottom: 0+'px'}}>
                     <div className="row">

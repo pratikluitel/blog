@@ -33,7 +33,6 @@ class Navigation extends Component{
             }
         }
 
-
         //navbar scroll highlighting
         (function(){
             var navlinks =$('nav ul li'),
@@ -57,6 +56,10 @@ class Navigation extends Component{
             });
         
         })();
+        if(this.props.isPostPage === true){
+            $('#toggling').css('position', 'absolute');
+            $('#togglingb').css('position', 'absolute')
+        }
     }
 
     toggleNav(){
@@ -83,7 +86,7 @@ class Navigation extends Component{
                     </Collapse>
                 </nav>
 
-                <nav className="nav nav-sm nav-not-sm nav-justified d-none d-md-block d-lg-none">
+                <nav className="nav nav-sm nav-not-sm nav-justified d-none d-md-block d-lg-none" id="toggling">
                     <ul className="navbar-nav">
                         <li className="nav-item Home-marker"><Link className="nav-link" to="/">Home</Link></li>
                         <li className="nav-item Blog-marker"><Link className="nav-link" to="/#main">Blog</Link></li>
@@ -91,7 +94,7 @@ class Navigation extends Component{
                         <li className="nav-item About-marker"><Link className="nav-link" to="/about">About</Link></li>
                     </ul>
                 </nav>
-                <nav className="nav nav-sm nav-for-lg nav-justified d-none d-lg-block">
+                <nav className="nav nav-sm nav-for-lg nav-justified d-none d-lg-block" id="togglingb">
                     <ul className="navbar-nav">
                         <li className="nav-item Home-marker"><Link className="nav-link" to="/">Home</Link></li>
                         <li className="nav-item Blog-marker"><Link className="nav-link" to="/#main">Blog</Link></li>
@@ -105,7 +108,8 @@ class Navigation extends Component{
 }
 
 Navigation.defaultProps={
-    typenav: 'alt-nav'
+    typenav: 'alt-nav',
+    isPostPage: false
 }
 
 export default Navigation;
