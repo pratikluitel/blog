@@ -30,9 +30,9 @@ function Footer(){
                                                     <i className="icon-light">
                                                         <span style={{
                                                             fontFamily:'helvetica', 
-                                                            fontSize: 'x-large'
+                                                            fontSize: '24px'
                                                     }}>g</span></i>
-                                                </span>&emsp;&emsp;&#8239;&#8239;
+                                                </span>&emsp;&emsp;&#8239;&#8239;&#8239;&#8239;
                                                 Goodreads</a>
                                         </li>
                                     </ul>
