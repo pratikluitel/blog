@@ -9,16 +9,16 @@ function Header(){
                 <div className="container">
                     <div className="row row-header text-center" id="hd-jumbo">
                         <div className="col-12">
-                            <h2><strong>Pratik Luitel</strong></h2>
+                            <h2 style={{color:"#ffffff"}}><strong>Pratik Luitel</strong></h2>
                         </div>
                         <div className="col-12 d-none d-sm-block">
                             <hr style={{ width: 300+'px'}} />
                         </div>
                         <div className="col-12 d-block d-sm-none">
-                            <hr style={{ width:90+'%'}} />
+                            <hr style={{ width:90+'%', borderTop: '1px solid #8bcbc9'}} />
                         </div>
                         <div className="col-12">
-                            <h5>Former Child, Aspiring Adult</h5>
+                            <h5 style={{color:"#ffffff"}}>Former Child, Aspiring Adult</h5>
                         </div>
                         <div className="col-12">
                             <br/>

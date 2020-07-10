@@ -4,15 +4,23 @@
   
   @media (min-width: 500px) and (max-width: 900px) {
     #conttt {
-      font-size: 18px; } }
+      font-size: 17px; } }
   
   @media (min-width: 900px) {
     #conttt {
-      font-size: 20px; } }
+      font-size: 18px; } }
   
   html {
-    scroll-behavior: smooth; }
+    scroll-behavior: smooth; 
+    }
   
+    body{
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
   a {
     color: #22a39f; }
   
@@ -27,7 +35,7 @@
     min-height: 100%;
     min-height: 100vh;
     border-radius: 0px;
-    color: #ffffff;
+    
     background: no-repeat center center fixed url("/img/personal/jumbotron.jpeg");
     background-size: cover; }
     .jumbotron #hd-jumbo {
@@ -70,10 +78,17 @@
     background-color: #59bab7; }
   
   .nav {
+    font-family: Arial;
     background-color: #222222;
     top: 34%;
     right: 4%;
     z-index: 999; }
+    .nav ul{
+      margin:0px
+    }
+    .nav li{
+      margin-bottom: 0px;
+    }
     .nav .navbar-nav a {
       display: block;
       margin: 0px;
@@ -103,6 +118,7 @@
     align-items: center; }
   
   #bloghead {
+    font-family: medium-content-sans-serif-font, sans-serif;
     margin-top: 100px;
     margin-bottom: 80px; }
     #bloghead h1 {

@@ -56,7 +56,7 @@ export default function Recommend({ttl}){
         <div className="row row-content" style={{marginTop: 50+'px',paddingTop: 25+'px', paddingBottom: 40+'px', backgroundColor: '#f3efe0'}}>
             <div className="col-10 col-md-8 offset-1 offset-md-2">
                 <h4 style={{color: 'lightseagreen'}}><strong>More Posts</strong></h4>
-                <hr/>
+                <hr style={{borderTop: "1px solid #aab4b5"}}/>
                 <div className="row row-content">
                 {
                 big_data.allMarkdownRemark.edges.map
