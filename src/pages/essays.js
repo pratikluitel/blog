@@ -33,9 +33,10 @@ export default function Essays() {
 
   const data = useStaticQuery(graphql`
   query essayQuery {
-    allMarkdownRemark(filter: {frontmatter: {category: {eq: "Essays"}}}) {
+    allMarkdownRemark(filter: {frontmatter: {category: {eq: "Essays"}}},sort: { order:DESC, fields: frontmatter___date}) {
       edges {
         node {
+          excerpt
           fields {
             slug
           }
@@ -60,7 +61,7 @@ export default function Essays() {
         <Navigation/>
         <section className="Blog"  id="main">
             <div className="text-center" id="bloghead">
-                <h1><strong>Posts</strong></h1>
+                <h1><strong>Essays</strong></h1>
                 <br />
                 <div className="col-10 offset-1 col-sm-6 offset-sm-3 col-md-4 offset-md-4" id="blognav">
                     <div className="row align-self-center">

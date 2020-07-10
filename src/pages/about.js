@@ -40,11 +40,11 @@ export default function About() {
                             <p> Hope you stick around.</p>
                             <br/>
                             <p><span style={{fontSize: 'x-large', color:'#22a39f'}}><strong>In Real Life</strong></span></p>
-                            <p> I am an Electronics and Communication Engineering student at <a href="https://pcampus.edu.np">IOE, Pulchowk Campus</a>, with interest in Data Science and Machine Learning.</p> 
+                            <p> I am an Electronics and Communication Engineering student at <a href="https://pcampus.edu.np" target="_blank" rel="noopener noreferrer">IOE, Pulchowk Campus</a>, with interest in Data Science and Machine Learning.</p> 
                                 <p>As of late, I have also
                             found myself growing increasingly fond of web development.</p>
                             <p>In my spare time, I love listening to music and playing video games, among a thousand other of my ever-expanding interests. Stick around the blog, and you'll know about all of them :p.</p>
-                            <p>I also love to <a href="https://www.goodreads.com/user/show/54605032-pratik-luitel">read</a> in my spare time (and sometimes when I have more important things to do).</p>
+                            <p>I also love to <a href="https://www.goodreads.com/user/show/54605032-pratik-luitel" target="_blank" rel="noopener noreferrer">read</a> in my spare time (and sometimes when I have more important things to do).</p>
                         </div>
                     </div>
                 </div>

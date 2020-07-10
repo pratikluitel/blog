@@ -8,7 +8,7 @@ export default function Err() {
   return (
     <Layout>
       <Helmet>
-        <title>About -- Pratik Luitel</title>
+        <title>You sure? -- Pratik Luitel</title>
         <link rel="canonical" href="http://pratikl.com.np/about" />
       </Helmet>
       <Navigation/>
