@@ -17,6 +17,7 @@
     "bootstrap": "^4.5.0",
     "font-awesome": "^4.7.0",
     "gatsby": "^2.23.12",
+    "gatsby-cli": "^2.12.60",
     "gatsby-plugin-manifest": "^2.4.18",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-typography": "^2.5.10",
