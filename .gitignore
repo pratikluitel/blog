@@ -5,7 +5,7 @@ src/essays
 src/poems
 src/stories
 src/images
-static/
+static/fonts
 
 # Logs
 logs
