@@ -4,7 +4,6 @@ import $ from 'jquery'
 class Share extends Component{
 
     componentDidMount(){
-        //navbar scroll highlighting
         (function(){
             
             var documentl = $(document),
