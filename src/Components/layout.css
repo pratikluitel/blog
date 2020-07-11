@@ -78,7 +78,7 @@
 #conttt div :first-child::first-letter{
   font-family: sans-serif;
   float       : left;
-  margin      : 0.08em 0.153em 0.02em 0;
+  margin      : 0.1em 0.153em 0.14em 0;
   color: #59bab7;
 }
   a {
@@ -136,9 +136,17 @@
   
   .active {
     background-color: #59bab7; }
-  
+
+.dropdown-menu{
+  transform: translateY(50px);
+  transition:.5s ease all;
+}
+.dropdown-menu .show{
+  transform: translateY(0px);
+  transition:.5s ease all;
+}
   .nav {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #222222;
     top: 34%;
     right: 4%;

@@ -19,7 +19,7 @@ function RenderCard({node}){
                     <p style={{fontSize: 'small'}}>{node.excerpt}</p>
                 </div>  
                 <div className="card-content" style={{color:'grey', fontSize: 'small'}}>
-                    <p>{node.timeToRead} min read</p>
+                    <p style={{fontSize: 'x-small'}}>{node.timeToRead} min read</p>
                 </div>
                 <Link to={node.fields.slug} className="stretched-link"> </Link>
             </div>

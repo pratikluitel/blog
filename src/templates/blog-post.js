@@ -3,9 +3,10 @@ import Layout from '../Components/layout'
 import { graphql } from "gatsby"
 import Navigation from '../Components/NavComponent'
 import Recommend from '../Components/RecommendComponent'
+import Share from '../Components/ShareComponent'
 import {Helmet} from 'react-helmet'
 
-export default function Post({data}) {
+export default function Post( {data} ) {
     const post = data.markdownRemark
     return (
         <Layout>
@@ -33,6 +34,7 @@ export default function Post({data}) {
                             </div>
                         </div>
                     </div>
+                    <Share slug={post.fields.slug}/>
                     <Recommend ttl={post.frontmatter.title}/>
                 </div>
             </section>
@@ -51,7 +53,7 @@ export const query = graphql`
         image
       }
       fields{
-          slug
+        slug
       }
     }
   }
