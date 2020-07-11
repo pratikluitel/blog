@@ -15,10 +15,10 @@ function RenderCard({node}){
                     <p style={{fontSize: 'xx-large'}}>{node.frontmatter.title}</p>
                 </div>
                 <div className="card-content">
-                    <p>{node.excerpt}</p>
+                    <p style={{fontSize: 'small'}}>{node.excerpt}</p>
                 </div>  
-                <div className="card-content" style={{color:'grey', fontSize: 'small'}}>
-                    <p>{node.timeToRead} min read</p>
+                <div className="card-content" style={{color:'grey'}}>
+                    <p style={{fontSize: 'x-small'}}>{node.timeToRead} min read</p>
                 </div>
                 <Link to={node.fields.slug} className="stretched-link"> </Link>
             </div>

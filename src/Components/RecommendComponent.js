@@ -16,7 +16,7 @@ function RenderCard({node}){
                     <p style={{fontSize: 'xx-large'}}>{node.frontmatter.title}</p>
                 </div>
                 <div className="card-content">
-                    <p>{node.excerpt}</p>
+                    <p style={{fontSize: 'small'}}>{node.excerpt}</p>
                 </div>  
                 <div className="card-content" style={{color:'grey', fontSize: 'small'}}>
                     <p>{node.timeToRead} min read</p>
@@ -53,7 +53,7 @@ export default function Recommend({ttl}){
     `
     )
     return(
-        <div className="row row-content" style={{marginTop: 50+'px',paddingTop: 25+'px', paddingBottom: 40+'px', backgroundColor: '#f3efe0'}}>
+        <div className="row row-content" style={{marginTop: 40+'px',paddingTop: 50+'px', paddingBottom: 40+'px', backgroundColor: '#f3efe0'}}>
             <div className="col-10 col-md-8 offset-1 offset-md-2">
                 <h4 style={{color: 'lightseagreen'}}><strong>More Posts</strong></h4>
                 <hr style={{borderTop: "1px solid #aab4b5"}}/>
