@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, useStaticQuery, graphql} from 'gatsby';
 
-function RenderCard({node}){
+export function RenderCard({node}){
     return(
         <div className="card hoverable">
             <div className="card-body">

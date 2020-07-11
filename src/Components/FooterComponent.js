@@ -16,7 +16,7 @@ function Footer(){
                                     <ul>
                                         <li>
                                             <a href="mailto:pluitel11@gmail.com" target="_blank" rel="noopener noreferrer">
-                                            &#8239;&#8239;<span className="fa fa-envelope"></span>&emsp;&emsp;Email</a>
+                                            &#8239;&#8239;<span className="fa fa-envelope"></span>&emsp;&emsp;Mail</a>
                                         </li>
                                         <li>
                                             <a href="https://www.linkedin.com/in/pratik-luitel-639a58175/" target="_blank" rel="noopener noreferrer">
