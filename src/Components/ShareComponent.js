@@ -32,9 +32,9 @@ class Share extends Component{
             <div className="d-none d-md-block" style={{top: 32+'%', left: 7+'%',position:'fixed'}}>
                 <div className="dropdown" id="#sharing">
                     
-                    <button data-toggle="dropdown" style={{fontSize:'30px'}}>
+                    <a href="#sharebtn" data-toggle="dropdown" style={{fontSize:'30px'}}>
                         <span className="fa fa-share-alt"></span>
-                    </button>
+                    </a>
                     <hr style={{height:'0.5px'}}/>
 
                     <div className="dropdown-menu" style={{border: 'none',fontSize:'27px',minWidth:0+'px', backgroundColor:'rgba(1,1,1,0)', paddingTop:'20px'}}>
