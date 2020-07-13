@@ -6,7 +6,7 @@ export function RenderCard({node}){
         <div className="card hoverable">
             <div className="card-body">
                 <div className="imgcont">
-                    {node.frontmatter.image != null ? <img className="card-img-top" src={`${node.frontmatter.image}`} alt=""/>: null }
+                    {node.frontmatter.image != null ? <img className="card-img-top" src={`${node.frontmatter.image}`} alt={`${node.frontmatter.image}`}/>: null }
                     <div id="date">
                         {node.frontmatter.date}
                     </div>

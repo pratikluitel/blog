@@ -15,7 +15,6 @@ class Share extends Component{
                 var currentScrollPos = documentl.scrollTop()+300;
 
                 if (currentScrollPos>=contactPos-200 || currentScrollPos<=600){
-                    console.log('exceed');
                     sharelink.hide(500)
                 }
                 else{

@@ -23,7 +23,7 @@ export default function Post( {data} ) {
                                 <h1 style={{color:"#22a39f"}}><strong>{ post.frontmatter.title }</strong></h1>
                             </div>
                             <div className="row justify-content-center" style={{marginBottom: 20+'px'}} >
-                                <img src={`${post.frontmatter.image}`} style={{marginBottom: 5+'px', width:90+'%', borderRadius:5+'px'}} alt=""/>
+                                {post.frontmatter.image != null?<img src={`${post.frontmatter.image}`} style={{marginBottom: 5+'px', width:90+'%', borderRadius:5+'px'}} alt={`${post.frontmatter.image}`}/>:null}
                                 <p className="caption" style={{color:'#494242', fontSize: 'x-small', textAlign: 'right', width: 90+'%'}}>{ post.frontmatter.caption }</p>
                             </div>
                             <div className="row row-content" id="conttt">

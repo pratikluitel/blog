@@ -7,7 +7,7 @@ function RenderCard({node}){
         <div className="card hoverable" style={{backgroundColor:"white"}}>
             <div className="card-body">
                 <div className="imgcont">
-                    {node.frontmatter.image != null ? <img className="card-img-top" src={`${node.frontmatter.image}`} alt=""/>: null }
+                    {node.frontmatter.image != null ? <img className="card-img-top" src={`${node.frontmatter.image}`} alt={`${node.frontmatter.alt}`}/>: null }
                     <div id="date">
                         {node.frontmatter.date}
                     </div>
@@ -44,6 +44,7 @@ export default function Recommend({ttl}){
                 image
                 title
                 featured
+                alt
               }
               id
             }

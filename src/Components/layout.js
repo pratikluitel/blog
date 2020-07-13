@@ -10,6 +10,7 @@ export default function Layout({children}) {
     <>
         <Helmet>
           <link rel="shortcut icon" href="/public/favicon.png" type="image/png" />
+          <meta name="author" content="Pratik Luitel"/>
         </Helmet>
         {children}
         <Footer/>

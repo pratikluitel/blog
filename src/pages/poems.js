@@ -19,8 +19,8 @@ export default function Poems() {
           timeToRead
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
-            image
             title
+            image
           }
         }
       }
