@@ -3,8 +3,9 @@ import Layout from '../Components/layout'
 import Navigation from '../Components/NavComponent'
 import {Link} from 'gatsby';
 import {Helmet} from 'react-helmet';
+import Img from 'gatsby-image'
 
-export default function About() {
+export default function About({data}) {
   return (
     <Layout>
       <Helmet>
@@ -28,7 +29,9 @@ export default function About() {
                         </div>
                     </div>
                     <div class="row row-content justify-content-center">
-                        <div class="author-pic"></div>
+                        <div class="author-pic">
+                          <Img fluid={data.imageAbo.childImageSharp.fluid} alt="Photo of Pratik Luitel"/>
+                        </div>
                     </div>
                     <div class="row row-content" style={{marginTop: 30+'px'}}>
                         <div class="text-content">
@@ -54,3 +57,15 @@ export default function About() {
     </Layout>
   )
 }
+
+export const pageQuery = graphql`
+    query {
+        imageAbo: file(relativePath: { eq: "images/img/personal/profile.jpg" }) {
+        childImageSharp {
+            fluid(maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+            }
+        }
+      }
+    }
+    `;

@@ -9,7 +9,6 @@ function Header({image}){
             <div className="jumbotron vertical-center" id="#home">
                 <div className="bgim">
                     <Img fluid={image} alt="man staring at a peculiar cloud" style={{width:'100%', height:'100%',objectFit:'cover'}}/>
-                    {/* <img src="/img/personal/jumbotron.jpeg" alt="man staring at a peculiar cloud" style={{width:'100%', height:'100%',objectFit:'cover'}}/> */}
                 </div>
                 <div className="overlay"></div>
                 <div className="container" id="hd-jumbo">

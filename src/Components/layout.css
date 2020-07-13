@@ -284,7 +284,8 @@
     height: 300px;
     border-radius: 150px 150px 0px 150px;
     margin-top: 40px;
-    background-image: url("/img/personal/profile.jpg"); }
+    overflow: hidden;
+     }
   
   .card {
     background-color: #f3efe0;
