@@ -32,6 +32,8 @@ module.exports = {
         display: "standalone",
        icon: "src/images/icons/favicon.png" // This path is relative to the root of the site.
     }
-  }
+  },
+  `gatsby-transformer-sharp`,
+  `gatsby-plugin-sharp`
   ],
 }

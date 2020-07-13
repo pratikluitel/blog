@@ -5,9 +5,12 @@ function Header(){
     return(
         <section className="Home">
             <div className="jumbotron vertical-center" id="#home">
+                <div className="bgim">
+                    <img src="/img/personal/jumbotron.jpeg" alt="man staring at a peculiar cloud" style={{width:'100%', height:'100%',objectFit:'cover'}}/>
+                </div>
                 <div className="overlay"></div>
-                <div className="container">
-                    <div className="row row-header text-center" id="hd-jumbo">
+                <div className="container" id="hd-jumbo">
+                    <div className="row row-header text-center" >
                         <div className="col-12">
                             <h2 style={{color:"#ffffff"}}><strong>Pratik Luitel</strong></h2>
                         </div>
