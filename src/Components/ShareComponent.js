@@ -43,7 +43,7 @@ class Share extends Component{
                                 <a href={`http://www.facebook.com/sharer.php?u=https://pratikl.com.np${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"><span className="fa fa-facebook"></span></a>
                             </div>
                             <div className="row">
-                                <a href={`https://twitter.com/share?u=https://pratikl.com.np${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"><span className="fa fa-twitter"></span></a>
+                                <a href={`https://www.twitter.com/share?url=https://pratikl.com.np${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"><span className="fa fa-twitter"></span></a>
                             </div>
                             <div className="row">
                                 <a href={`https://www.reddit.com/submit?url=https://pratikl.com.np${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"><span className="fa fa-reddit"></span></a>
@@ -66,7 +66,7 @@ class Share extends Component{
                                 <a href={`http://www.facebook.com/sharer.php?u=https://pratikl.com.np${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"><span className="fa fa-facebook"></span></a>
                             </div>
                             <div className="col-1">
-                                <a href={`https://twitter.com/share?u=https://pratikl.com.np${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"> <span className="fa fa-twitter"></span></a>
+                                <a href={`https://www.twitter.com/share?url=https://pratikl.com.np${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"> <span className="fa fa-twitter"></span></a>
                             </div>
                             <div className="col-1" style={{marginLeft:5+'px'}}>
                                 <a href={`https://www.reddit.com/submit?url=https://pratikl.com.np${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"> <span className="fa fa-reddit"></span></a>
