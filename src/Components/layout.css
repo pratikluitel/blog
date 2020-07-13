@@ -4,6 +4,7 @@
        url('../../static/fonts/Josefin/merriweather-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Merry';
@@ -11,6 +12,7 @@
        url('../../static/fonts/Josefin/merriweather-italic-webfont.woff') format('woff');
   font-weight: normal;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Merry';
@@ -18,6 +20,7 @@
        url('../../static/fonts/Josefin/merriweather-bold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: bold;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Merry';
@@ -25,6 +28,7 @@
        url('../../static/fonts/Josefin/merriweather-light-webfont.woff') format('woff');
   font-weight: lighter;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Merry';
@@ -32,6 +36,7 @@
        url('../../static/fonts/Josefin/merriweather-lightitalic-webfont.woff') format('woff');
   font-weight: lighter;
   font-style: italic;
+  font-display: swap
 }
 
 @media (max-width: 500px) {
@@ -96,8 +101,8 @@
     min-height: 100vh;
     border-radius: 0px;
     text-align: center;
-    /* background: no-repeat center center fixed url("/img/personal/jumbotron.jpeg");
-    background-size: cover;  */
+    background: no-repeat center center fixed url("../images/img/personal/jumbotron.webp");
+    background-size: cover; 
   }
   .jumbotron .bgim{
       overflow: hidden;

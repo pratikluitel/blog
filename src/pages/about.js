@@ -62,7 +62,7 @@ export const pageQuery = graphql`
     query {
         imageAbo: file(relativePath: { eq: "images/img/personal/profile.jpg" }) {
         childImageSharp {
-            fluid(maxWidth: 400) {
+            fluid {
             ...GatsbyImageSharpFluid
             }
         }

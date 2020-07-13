@@ -1,15 +1,15 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 
-function Header({image}){
-    console.log(image)
+function Header(){
     return(
         <section className="Home">
             <div className="jumbotron vertical-center" id="#home">
-                <div className="bgim">
-                    <Img fluid={image} alt="man staring at a peculiar cloud" style={{objectFit:'cover',overflow: 'hidden',height:'100%'}}/>
-                </div>
+                
+                {/* <div className="bgim">
+                    <Img fluid={image} alt="man staring at a peculiar cloud" style={{position:'static',objectFit:'cover',overflow: 'hidden',height:'100%'}}/>
+                </div> */}
                 <div className="overlay"></div>
                 <div className="container" id="hd-jumbo">
                     <div className="row row-header text-center" >

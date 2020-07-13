@@ -22,7 +22,7 @@ export default function Poems() {
             title
             featuredImage {
               childImageSharp {
-                fluid(maxHeight: 300) {
+                fluid(maxWidth:420, maxHeight: 274, quality: 40) {
                   ...GatsbyImageSharpFluid
                 }
               }
