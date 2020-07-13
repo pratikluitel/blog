@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from '../Components/layout'
 import Navigation from '../Components/NavComponent'
-import {Link} from 'gatsby';
+import {graphql, Link} from 'gatsby';
 import {Helmet} from 'react-helmet';
 import Img from 'gatsby-image'
 
@@ -62,7 +62,7 @@ export const pageQuery = graphql`
     query {
         imageAbo: file(relativePath: { eq: "images/img/personal/profile.jpg" }) {
         childImageSharp {
-            fluid(maxWidth: 500) {
+            fluid(maxWidth: 400) {
             ...GatsbyImageSharpFluid
             }
         }

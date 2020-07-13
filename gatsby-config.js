@@ -21,6 +21,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/images/img/blog`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: "GatsbyJS",

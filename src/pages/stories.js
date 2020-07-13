@@ -20,7 +20,13 @@ export default function Stories() {
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            image
+            featuredImage {
+              childImageSharp {
+                fluid(maxHeight: 300) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

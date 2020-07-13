@@ -100,11 +100,12 @@
     background-size: cover;  */
   }
   .jumbotron .bgim{
-    width:100%; 
-    height:100%;
-    position: absolute;
-    overflow: hidden;
-    text-align: center;
+      overflow: hidden;
+      position: absolute;
+      top: 0px;
+      width:100%; 
+      height:100%;
+      text-align: center;
   }
     .jumbotron #hd-jumbo {
       
@@ -305,7 +306,7 @@
           color: #ffffff;
           padding: 3px;
           background-color: #59bab7; }
-        .card .card-body .imgcont img {
+        .card .card-body .imgcont .card-img-top{
           transition: transform .4s ease; }
       .card .card-body .card-content {
         margin-left: 20px;
@@ -320,7 +321,7 @@
   .card:hover .imgcont #date {
     background-color: #22a39f; }
   
-  .card:hover .imgcont img {
+  .card:hover .imgcont .card-img-top {
     transform: scale(1.04);
     transform-origin: 50% 50%; }
   

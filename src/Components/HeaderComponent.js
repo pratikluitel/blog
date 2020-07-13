@@ -8,7 +8,7 @@ function Header({image}){
         <section className="Home">
             <div className="jumbotron vertical-center" id="#home">
                 <div className="bgim">
-                    <Img fluid={image} alt="man staring at a peculiar cloud" style={{width:'100%', height:'100%',objectFit:'cover'}}/>
+                    <Img fluid={image} alt="man staring at a peculiar cloud" style={{objectFit:'cover',overflow: 'hidden',height:'100%'}}/>
                 </div>
                 <div className="overlay"></div>
                 <div className="container" id="hd-jumbo">

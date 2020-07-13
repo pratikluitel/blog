@@ -1,13 +1,13 @@
 import React from 'react'
 import {Link, graphql, useStaticQuery} from 'gatsby'
-
+import Img from 'gatsby-image'
 
 function RenderCard({node}){
     return(
         <div className="card hoverable" style={{backgroundColor:"white"}}>
             <div className="card-body">
                 <div className="imgcont">
-                    {node.frontmatter.image != null ? <img className="card-img-top" src={`${node.frontmatter.image}`} alt={`${node.frontmatter.alt}`}/>: null }
+                {node.frontmatter.featuredImage != null ? <Img className="card-img-top" fluid={node.frontmatter.featuredImage.childImageSharp.fluid} alt={`${node.frontmatter.alt}`}/>: null }
                     <div id="date">
                         {node.frontmatter.date}
                     </div>
@@ -41,10 +41,16 @@ export default function Recommend({ttl}){
               }
               frontmatter {
                 date(formatString: "MMMM DD, YYYY")
-                image
                 title
                 featured
                 alt
+                featuredImage {
+                    childImageSharp {
+                      fluid(maxHeight: 300) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
               }
               id
             }

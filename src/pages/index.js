@@ -4,6 +4,7 @@ import Layout from '../Components/layout'
 import Navigation from "../Components/NavComponent"
 import PostsList from "../Components/PostsListComponent"
 import {Helmet} from "react-helmet"
+import {graphql} from 'gatsby'
 
 const Home = (props) => (
   <Layout>
@@ -21,7 +22,7 @@ export default Home;
 
 export const pageQuery = graphql`
     query {
-        imageJumbo: file(relativePath: { eq: "images/img/personal/jumbotron.jpeg" }) {
+        imageJumbo: file(relativePath: { eq: "images/img/personal/jumbotron.jpg" }) {
         childImageSharp {
             fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid

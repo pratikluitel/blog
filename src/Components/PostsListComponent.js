@@ -1,12 +1,13 @@
 import React from 'react';
 import {Link, useStaticQuery, graphql} from 'gatsby';
+import Img from 'gatsby-image'
 
 export function RenderCard({node}){
     return(
         <div className="card hoverable">
             <div className="card-body">
                 <div className="imgcont">
-                    {node.frontmatter.image != null ? <img className="card-img-top" src={`${node.frontmatter.image}`} alt={`${node.frontmatter.image}`}/>: null }
+                    {node.frontmatter.featuredImage != null ? <Img className="card-img-top" fluid={node.frontmatter.featuredImage.childImageSharp.fluid} alt={`${node.frontmatter.alt}`}/>: null }
                     <div id="date">
                         {node.frontmatter.date}
                     </div>
@@ -37,9 +38,15 @@ export default function PostList(){
                     frontmatter {
                       date(formatString: "MMMM DD, YYYY")
                       featured
-                      image
                       title
                       category
+                      featuredImage {
+                        childImageSharp {
+                          fluid(maxHeight: 300) {
+                            ...GatsbyImageSharpFluid
+                          }
+                        }
+                      }
                     }
                     fields {
                         slug

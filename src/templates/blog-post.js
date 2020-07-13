@@ -5,9 +5,11 @@ import Navigation from '../Components/NavComponent'
 import Recommend from '../Components/RecommendComponent'
 import Share from '../Components/ShareComponent'
 import {Helmet} from 'react-helmet'
+import Img from 'gatsby-image'
 
 export default function Post( {data} ) {
     const post = data.markdownRemark
+    let featuredImg = post.frontmatter.featuredImage;
     return (
         <Layout>
             <Helmet>
@@ -23,7 +25,7 @@ export default function Post( {data} ) {
                                 <h1 style={{color:"#22a39f"}}><strong>{ post.frontmatter.title }</strong></h1>
                             </div>
                             <div className="row justify-content-center" style={{marginBottom: 20+'px'}} >
-                                {post.frontmatter.image != null?<img src={`${post.frontmatter.image}`} style={{marginBottom: 5+'px', width:90+'%', borderRadius:5+'px'}} alt={`${post.frontmatter.image}`}/>:null}
+                                {featuredImg != null?<Img fluid={featuredImg.childImageSharp.fluid} style={{marginBottom: 5+'px', width:90+'%', borderRadius:5+'px'}} alt={`${post.frontmatter.image}`}/>:null}
                                 <p className="caption" style={{color:'#494242', fontSize: 'x-small', textAlign: 'right', width: 90+'%'}}>{ post.frontmatter.caption }</p>
                             </div>
                             <div className="row row-content" id="conttt">
@@ -50,7 +52,13 @@ export const query = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         caption
-        image
+        featuredImage {
+            childImageSharp {
+              fluid(maxWidth: 800) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
       }
       fields{
         slug
