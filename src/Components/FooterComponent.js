@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Footer(){
+function Footer({contact}){
     return(
         <section className="Contact">
             <div className="footer" id="contact">
@@ -15,42 +15,33 @@ function Footer(){
                                 <div className="col-12 col-sm-6">
                                     <ul>
                                         <li>
-                                            <a href="mailto:pluitel11@gmail.com" target="_blank" rel="noopener noreferrer">
-                                            &#8239;&#8239;<span className="fa fa-envelope"></span>&emsp;&emsp;Mail</a>
+                                            <a href={contact.pos_1.url} target="_blank" rel="noopener noreferrer">
+                                            &#8239;<span className={`fa fa-${contact.pos_1.font}`}></span>&emsp;&emsp;<span style={{textTransform:'capitalize'}}>{contact.pos_1.type}</span></a>
                                         </li>
                                         <li>
-                                            <a href="https://www.linkedin.com/in/pratik-luitel-639a58175/" target="_blank" rel="noopener noreferrer">
-                                            &#8239;&#8239;<span className="fa fa-linkedin"></span>&emsp;&emsp;
-                                                Linkedin</a>
+                                        <a href={contact.pos_2.url} target="_blank" rel="noopener noreferrer">
+                                            &#8239;&#8239;<span className={`fa fa-${contact.pos_2.font}`}></span>&emsp;&emsp;<span style={{textTransform:'capitalize'}}>{contact.pos_2.type}</span></a>
                                         </li>
                                         <li>
-                                            <a href="https://www.goodreads.com/user/show/54605032-pratik-luitel" target="_blank" rel="noopener noreferrer">
-                                            &#8239;&#8239;<span className="icon-stack">
-                                                    <i className="icon-sign-blank icon-stack-base"></i>
-                                                    <span className="icon-light">
-                                                        <span style={{
-                                                            fontFamily:'helvetica', 
-                                                            fontSize: '24px'
-                                                    }}>&#8239;g</span></span>
-                                                </span>&emsp;&emsp;&#8239;&#8239;
-                                                Goodreads</a>
+                                        <a href={contact.pos_3.url} target="_blank" rel="noopener noreferrer">
+                                            &#8239;&#8239;<span className={`fa fa-${contact.pos_3.font}`}></span>&emsp;&emsp;<span style={{textTransform:'capitalize'}}>{contact.pos_3.type}</span></a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div className="col col-sm">
                                     <ul>
                                         <li>
-                                            <a href="https://www.github.com/pratikluitel" target="_blank" rel="noopener noreferrer">
-                                            &#8239;&#8239;<span className="fa fa-github"></span>&emsp;&emsp;&#8239;Github</a>
+                                            <a href={contact.pos_4.url} target="_blank" rel="noopener noreferrer">
+                                            &#8239;&#8239;<span className={`fa fa-${contact.pos_4.font}`}></span>&emsp;&emsp;&#8239;<span style={{textTransform:'capitalize'}}>{contact.pos_4.type}</span></a>
                                         </li>
                                         <li>
-                                            <a href="https://www.twitter.com/pratikHluitel" target="_blank" rel="noopener noreferrer">
-                                            &#8239;&#8239;<span className="fa fa-twitter"></span>&emsp;&emsp;&#8239;Twitter</a>
+                                            <a href={contact.pos_5.url} target="_blank" rel="noopener noreferrer">
+                                            &#8239;&#8239;<span className={`fa fa-${contact.pos_5.font}`}></span>&emsp;&emsp;&#8239;<span style={{textTransform:'capitalize'}}>{contact.pos_5.type}</span></a>
                                         </li>
                                         <li>
-                                            <a href="https://soundcloud.com/pratik_luitel" target="_blank" rel="noopener noreferrer">
-                                                <span className="fa fa-soundcloud"></span>&emsp;&#8239;&#8239;&#8239;&#8239;
-                                                Soundcloud</a>
+                                            <a href={contact.pos_6.url} target="_blank" rel="noopener noreferrer">
+                                                <span className={`fa fa-${contact.pos_6.font}`}></span>&emsp;&#8239;&#8239;&#8239;&#8239;
+                                                <span style={{textTransform:'capitalize'}}>{contact.pos_6.type}</span></a>
                                         </li>
                                     </ul>
                                 </div>

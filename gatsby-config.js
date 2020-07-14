@@ -7,7 +7,41 @@
 module.exports = {
   /* Your site config here */
   siteMetadata:{
-    title:'Pratik Luitel -- A Blog'
+    title:'Pratik Luitel -- A Blog', //this will appear in the title of your homepage
+    author: 'Pratik Luitel',
+    description: 'Former Child, Aspiring Adult',
+    contact:{
+      pos_1:{ //in the font, type the font-awesome icon name. Generally this is the same as the type, but better safe than sorry!
+        type: 'mail',
+        font: 'envelope',
+        url: 'mailto:pluitel11@gmail.com'
+      },
+      pos_2:{
+        type: 'linkedin',
+        font: 'linkedin',
+        url: 'https://www.linkedin.com/in/pratik-luitel-639a58175/'
+      },
+      pos_3:{
+        type: 'instagram',
+        font: 'instagram',
+        url: 'https://www.instagram.com/pratik_luitel'
+      },
+      pos_4:{
+        type: 'github',
+        font: 'github',
+        url: 'https://www.github.com/pratikluitel'
+      },
+      pos_5:{
+        type: 'twitter',
+        font: 'twitter',
+        url: 'https://www.twitter.com/pratikHluitel'
+      },
+      pos_6:{
+        type: 'soundcloud',
+        font: 'soundcloud',
+        url: 'https://soundcloud.com/pratik_luitel'
+      }
+    }
   },
     plugins: [
       `gatsby-transformer-remark`,
