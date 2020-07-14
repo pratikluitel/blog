@@ -42,7 +42,7 @@ export default function PostList(){
                       category
                       featuredImage {
                         childImageSharp {
-                          fluid(maxWidth:600, maxHeight: 300, quality: 100) {
+                          fluid(maxHeight: 300, quality: 40) {
                             ...GatsbyImageSharpFluid
                           }
                         }
