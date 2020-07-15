@@ -13,8 +13,8 @@ export default function Post( {data} ) {
     return (
         <Layout>
             <Helmet>
-                <title>{post.frontmatter.title} -- Pratik Luitel</title>
-                <link rel="canonical" href={`http://pratikl.com.np/${post.fields.slug}`} />
+                <title>{post.frontmatter.title} -- {data.site.siteMetadata.author}</title>
+                <link rel="canonical" href={`${data.site.siteMetadata.site}${post.fields.slug}`} />
             </Helmet>
             <Navigation isPostPage= {true} />
             <section className="Blog">
@@ -46,6 +46,12 @@ export default function Post( {data} ) {
 
 export const query = graphql`
   query($slug: String!) {
+    site {
+      siteMetadata {
+        author
+        site
+      }
+    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

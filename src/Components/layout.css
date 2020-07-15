@@ -101,8 +101,8 @@
     min-height: 100vh;
     border-radius: 0px;
     text-align: center;
-    /* background: no-repeat center center fixed url("../images/img/personal/jumbotron.webp");
-    background-size: cover;  */
+    background: no-repeat center center fixed url("../images/img/personal/jumbotron.webp");
+    background-size: cover; 
   }
   .jumbotron .bgim{
       overflow: hidden;

@@ -18,11 +18,6 @@ export default function Layout({children}) {
             font
             url
           }
-          pos_2 {
-            type
-            font
-            url
-          }
           pos_3 {
             type
             font
@@ -38,13 +33,7 @@ export default function Layout({children}) {
             font
             url
           }
-          pos_6 {
-            type
-            font
-            url
-          }
         }
-        
       }
     }
   }`)
