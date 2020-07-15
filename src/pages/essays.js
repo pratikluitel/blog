@@ -9,6 +9,12 @@ export default function Essays() {
 
   const data = useStaticQuery(graphql`
   query essayQuery {
+    site {
+      siteMetadata {
+        author
+        site
+      }
+    }
     allMarkdownRemark(filter: {frontmatter: {category: {eq: "Essays"}}},sort: { order:DESC, fields: frontmatter___date}) {
       edges {
         node {
@@ -37,8 +43,8 @@ export default function Essays() {
     return (
       <Layout>
         <Helmet>
-          <title>Essays -- Pratik Luitel</title>
-          <link rel="canonical" href="http://pratikl.com.np/essays" />
+          <title>Essays -- {data.site.siteMetadata.author}</title>
+          <link rel="canonical" href={`${data.site.siteMetadata.site}/essays`} />
         </Helmet>
         <Navigation/>
         <section className="Blog"  id="main">

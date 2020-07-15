@@ -9,7 +9,9 @@ module.exports = {
   siteMetadata:{
     title:'Pratik Luitel -- A Blog', //this will appear in the title of your homepage
     author: 'Pratik Luitel',
-    description: 'Former Child, Aspiring Adult',
+    description: 'Former Child, Aspiring Adult', //appears on the header
+    site:'https://pratikl.com.np',
+    siteDesc:"A blog where I share my writings -- stories (fiction and otherwise), poems and some hot takes on things I see areound me", //this is for the meta data
     contact:{
       pos_1:{ //in the font, type the font-awesome icon name. Generally this is the same as the type, but better safe than sorry!
         type: 'mail',

@@ -51,7 +51,10 @@ function Footer({contact}){
                     </div>
                     <br/>
                     <div className="row row-content justify-content-center">
-                        <p style={{fontSize:'small'}}>Built with <a href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer"><u>GatsbyJs</u></a>, some <a href="https://graphql.org/" target="_blank" rel="noopener noreferrer"><u>GraphQL</u></a>, and a lot of <a href="https://en.wikipedia.org/wiki/Pain" target="_blank" rel="noopener noreferrer"><u>love</u></a></p>
+                        <p style={{fontSize:'small'}}>Built with <a href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer"><u>GatsbyJs</u></a> and some <a href="https://graphql.org/" target="_blank" rel="noopener noreferrer"><u>GraphQL</u></a></p>
+                    </div>
+                    <div className="row row-content justify-content-center">
+                        <p style={{fontSize:'x-small'}}>This project is also on <a href="https://www.github.com/pratikluitel/site-meta" target="_blank" rel="noopener noreferrer"><u>Github</u></a></p>
                     </div>
                 </div>
             </div>

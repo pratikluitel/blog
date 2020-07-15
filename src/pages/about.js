@@ -1,16 +1,17 @@
 import React from "react"
 import Layout from '../Components/layout'
 import Navigation from '../Components/NavComponent'
-import {graphql, Link} from 'gatsby';
+import {graphql} from 'gatsby';
 import {Helmet} from 'react-helmet';
 import Img from 'gatsby-image'
 
 export default function About({data}) {
+  const content = data.allMarkdownRemark.nodes[0]
   return (
     <Layout>
       <Helmet>
-        <title>About -- Pratik Luitel</title>
-        <link rel="canonical" href="http://pratikl.com.np/about" />
+        <title>About -- {data.site.siteMetadata.author}</title>
+        <link rel="canonical" href={`${data.site.siteMetadata.site}/about`} />
       </Helmet>
       <Navigation/>
       <section class="About">
@@ -30,24 +31,12 @@ export default function About({data}) {
                     </div>
                     <div class="row row-content justify-content-center">
                         <div class="author-pic">
-                          <Img fluid={data.imageAbo.childImageSharp.fluid} alt="Photo of Pratik Luitel"/>
+                          <Img fluid={content.frontmatter.featuredImage.childImageSharp.fluid} alt="Photo of the author"/>
                         </div>
                     </div>
                     <div class="row row-content" style={{marginTop: 30+'px'}}>
                         <div class="text-content">
-                            <p><span style={{fontSize: 'x-large', color:'#22a39f'}}><strong>Hello</strong></span></p>
-                            <p>I have no idea how you stumbled across this secluded corner of the internet, my friend, but now that you have, let me indulge you for a couple of minutes.</p>
-                            <p>What you have before you is my humble abode. Somewhat untidy, I know, but hey - that's where we all start off, right?</p>
-                            <p>This is a blog I started in a desperate attempt to end my long writing hiatus. You probably already know <Link to="/#main">how it panned out</Link>, since you've made it into the ABOUT SECTION.</p>
-                            <p>If those semi incoherent ramblings and outlandish tales did not bore you, then well.., my friend... and I shudder to tell you tell you this, but I'm afraid you have a terrible case of "a lost cause syndrome", as I like to call it. I send my regards, wherever you are in the world.</p>
-                            <p> Hope you stick around.</p>
-                            <br/>
-                            <p><span style={{fontSize: 'x-large', color:'#22a39f'}}><strong>In Real Life</strong></span></p>
-                            <p> I am an Electronics and Communication Engineering student at <a href="https://pcampus.edu.np" target="_blank" rel="noopener noreferrer">IOE, Pulchowk Campus</a>, with interest in Data Science and Machine Learning.</p> 
-                                <p>As of late, I have also
-                            found myself growing increasingly fond of web development.</p>
-                            <p>In my spare time, I love listening to music and playing video games, among a thousand other of my ever-expanding interests. Stick around the blog, and you'll know about all of them :p.</p>
-                            <p>I also love to <a href="https://www.goodreads.com/user/show/54605032-pratik-luitel" target="_blank" rel="noopener noreferrer">read</a> in my spare time (and sometimes when I have more important things to do).</p>
+                          <div dangerouslySetInnerHTML={{ __html: content.html }}/>
                         </div>
                     </div>
                 </div>
@@ -60,12 +49,25 @@ export default function About({data}) {
 
 export const pageQuery = graphql`
     query {
-        imageAbo: file(relativePath: { eq: "images/img/personal/profile.jpg" }) {
-        childImageSharp {
-            fluid {
-            ...GatsbyImageSharpFluid
-            }
+      site {
+        siteMetadata {
+          author
+          site
         }
       }
-    }
+      allMarkdownRemark(filter: {frontmatter: {title: {eq: "About"}}}) {
+          nodes {
+            frontmatter {
+              featuredImage {
+                childImageSharp {
+                  fluid(maxHeight: 600) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+            html
+          }
+        }
+      }
     `;

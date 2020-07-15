@@ -11,6 +11,7 @@ export default function Layout({children}) {
   `query linkQuery {
     site {
       siteMetadata {
+        author
         contact {
           pos_1 {
             type
@@ -51,7 +52,7 @@ export default function Layout({children}) {
     <>
         <Helmet>
           <link rel="shortcut icon" href="/public/favicon.png" type="image/png" />
-          <meta name="author" content="Pratik Luitel"/>
+          <meta name="author" content={data.site.siteMetadata.author}/>
         </Helmet>
         {children}
         <Footer contact={data.site.siteMetadata.contact}/>

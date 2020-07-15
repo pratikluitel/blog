@@ -11,8 +11,8 @@ const Home = ({data}) => (
   <Layout>
     <Helmet>
       <title>{data.site.siteMetadata.title}</title>
-      <link rel="canonical" href="http://pratikl.com.np/" />
-      <meta name="description" content="A blog where I share my writings -- stories (fiction and otherwise), poems and some hot takes on things I see areound me"/>
+      <link rel="canonical" href={data.site.siteMetadata.site} />
+      <meta name="description" content={data.site.siteMetadata.siteDesc}/>
     </Helmet>
     <Navigation typenav='nav'/>
     <Header author={data.site.siteMetadata.author} desc={data.site.siteMetadata.description}/>
@@ -25,6 +25,7 @@ export const PageQuery = graphql`query metaQuery {
   site {
     siteMetadata {
       title
+      site
       author
       description
     }

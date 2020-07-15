@@ -29,7 +29,7 @@ export function RenderCard({node}){
 export default function PostList(){
     const data = useStaticQuery(graphql`
         query {
-            allMarkdownRemark(sort: { order:DESC, fields: frontmatter___date}) {
+            allMarkdownRemark(filter: {frontmatter: {title: {ne: "About"}}}, sort: { order:DESC, fields: frontmatter___date}) {
                 edges {
                   node {
                     timeToRead
@@ -61,7 +61,7 @@ export default function PostList(){
             <div className="text-center" id="bloghead">
                 <h1><strong>Posts</strong></h1>
                 <br />
-                <div className="col-10 offset-1 col-sm-6 offset-sm-3 col-md-4 offset-md-4" id="blognav">
+                {/* <div className="col-10 offset-1 col-sm-6 offset-sm-3 col-md-4 offset-md-4" id="blognav">
                     <div className="row align-self-center">
                         <div className="col-4">
                             <Link to="/stories" className="stretched-link">Stories</Link>
@@ -73,7 +73,7 @@ export default function PostList(){
                             <Link to="/poems" className="stretched-link">Poems</Link>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
             <div className="col-sm-8 offset-sm-2">
                 <div className="row">

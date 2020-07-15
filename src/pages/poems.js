@@ -9,7 +9,13 @@ export default function Poems() {
 
   const data = useStaticQuery(graphql`
   query poemQuery {
-    allMarkdownRemark(filter: {frontmatter: {category: {eq: "Poems"}}},sort: { order:DESC, fields: frontmatter___date}) {
+    site {
+      siteMetadata {
+        author
+        site
+      }
+    }
+    allMarkdownRemark(filter: {frontmatter: {category: {eq: "Poems"}}}, sort: { order:DESC, fields: frontmatter___date}) {
       edges {
         node {
           excerpt
@@ -37,8 +43,8 @@ export default function Poems() {
     return (
       <Layout>
         <Helmet>
-          <title>Poems -- Pratik Luitel</title>
-          <link rel="canonical" href="http://pratikl.com.np/poems" />
+          <title>Poems -- {data.site.siteMetadata.author}</title>
+          <link rel="canonical" href={`${data.site.siteMetadata.author}/poems`} />
         </Helmet>
         <Navigation/>
         <section className="Blog"  id="main">
