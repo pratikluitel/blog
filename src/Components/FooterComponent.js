@@ -22,6 +22,10 @@ function Footer({contact}){
                                         <a href={contact.pos_3.url} target="_blank" rel="noopener noreferrer">
                                             &#8239;&#8239;<span className={`fa fa-${contact.pos_3.font}`}></span>&emsp;&emsp;<span style={{textTransform:'capitalize'}}>{contact.pos_3.type}</span></a>
                                         </li>
+                                    </ul>
+                                </div>
+                                <div className="col col-sm">
+                                    <ul>
                                         <li>
                                             <a href={contact.pos_4.url} target="_blank" rel="noopener noreferrer">
                                             &#8239;&#8239;<span className={`fa fa-${contact.pos_4.font}`}></span>&emsp;&emsp;<span style={{textTransform:'capitalize'}}>{contact.pos_4.type}</span></a>
@@ -30,7 +34,6 @@ function Footer({contact}){
                                             <a href={contact.pos_5.url} target="_blank" rel="noopener noreferrer">
                                             &#8239;&#8239;<span className={`fa fa-${contact.pos_5.font}`}></span>&emsp;&emsp;<span style={{textTransform:'capitalize'}}>{contact.pos_5.type}</span></a>
                                         </li>
-                                        
                                     </ul>
                                 </div>
                             </div>
