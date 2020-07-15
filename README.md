@@ -92,9 +92,7 @@ There's already some content in there, you can edit it. (doesn't have to be html
 Keep in mind that the title frontMeta remains 'About' or nasty stuff will happen
 
 ##### P.S. you can also add a nice photo to the jumbotron (big blue space in the header of the home page. name the file jumbotron.webp and put it in the personal photos directory. Don't add questions. I'll fix this thing soon)
-#
-#
-#
+
 ## 🧐 More colour pallets and dark theme to be added soon!
 
 

@@ -15,7 +15,7 @@ const Home = ({data}) => (
       <meta name="description" content={data.site.siteMetadata.siteDesc}/>
     </Helmet>
     <Navigation typenav='nav'/>
-    <Header author={data.site.siteMetadata.author} desc={data.site.siteMetadata.description}/>
+    <Header author={data.site.siteMetadata.author} desc={data.site.siteMetadata.description} image={data.allImageSharp.nodes[0].fluid}/>
     <PostsList/>
   </Layout>
 )
@@ -30,4 +30,12 @@ export const PageQuery = graphql`query metaQuery {
       description
     }
   }
+    allImageSharp(filter: {fluid: {originalName: {eq: "jumbotron.webp"}}}) {
+      nodes {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
 }`
