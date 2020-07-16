@@ -28,7 +28,7 @@ class Share extends Component{
     render(){
         return(
             <>
-            <div className="d-none d-md-block" style={{top: 32+'%', left: 7+'%',position:'fixed'}}>
+            <div className="d-none d-md-block sharecontainer">
                 <div className="dropdown" id="#sharing">
                     
                     <a href="#sharebtn" data-toggle="dropdown" style={{fontSize:'30px'}}>
@@ -36,7 +36,7 @@ class Share extends Component{
                     </a>
                     <hr style={{height:'0.5px'}}/>
 
-                    <div className="dropdown-menu" style={{border: 'none',fontSize:'27px',minWidth:0+'px', backgroundColor:'rgba(1,1,1,0)', paddingTop:'20px'}}>
+                    <div className="dropdown-menu">
                         <div className="con" style={{padding:15+'px'}}>
                             <div className="row">
                                 <a href={`http://www.facebook.com/sharer.php?u=https://pratikl.com.np${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"><span className="fa fa-facebook"></span></a>
