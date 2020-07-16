@@ -160,6 +160,11 @@
       opacity:0;
       transform: translateY(50px);
       transition:.5s ease all;
+      border: none;
+      font-size:27px;
+      min-width:0px; 
+      background-color:rgba(1,1,1,0);
+      padding-top:20px;
     }
     .dropdown-menu.show 
     {
@@ -335,3 +340,15 @@
     height: 20vw;
     object-fit: cover;
     margin-bottom: 5px; }
+
+.recomm{
+  margin-top: 40px;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  background-color: #f3efe0;
+}
+.sharecontainer{
+  top: 32%;
+  left: 7%;
+  position:fixed;
+}
