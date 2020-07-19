@@ -412,3 +412,19 @@ margin-bottom: 30px;
   left: 7%;
   position:fixed;
 }
+
+.sharetxt{
+  font-size:18px;
+  color: $highlight-theme
+}
+
+.caption{
+  color:$light-secondary-theme;
+  font-size: x-small;
+  text-align: right;
+  width: 90%;
+}
+.lowcaption{
+  color:$light-secondary-theme;
+  font-size:small;
+}
