@@ -59,7 +59,7 @@ class Share extends Component{
                 <div className="col-10 col-md-8 col-lg-6 offset-1 offset-md-2 offset-lg-3" >
                         <div className="row" style={{fontSize:'24px', justifyContent:'right'}}>
                             <div style={{textAlign:'right'}}>
-                                <span style={{fontSize:'18px', color:'#22a39f'}}><strong>Share:</strong></span>
+                                <span className="sharetxt"><strong>Share:</strong></span>
                             </div>
                             <div className="col-1">
                                 <a href={`http://www.facebook.com/sharer.php?u=https://pratikl.com.np${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"><span className="fa fa-facebook"></span></a>

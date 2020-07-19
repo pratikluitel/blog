@@ -26,13 +26,13 @@ export default function Post( {data} ) {
                             </div>
                             <div className="row justify-content-center" style={{marginBottom: 20+'px'}} >
                                 {featuredImg != null?<Img fluid={featuredImg.childImageSharp.fluid} style={{marginBottom: 5+'px', width:90+'%', borderRadius:5+'px'}} alt={`${post.frontmatter.image}`}/>:null}
-                                <p className="caption" style={{color:'#494242', fontSize: 'x-small', textAlign: 'right', width: 90+'%'}}>{ post.frontmatter.caption }</p>
+                                <p className="caption">{ post.frontmatter.caption }</p>
                             </div>
                             <div className="row row-content" id="conttt">
                                 <div dangerouslySetInnerHTML={{ __html: post.html }}/>
                             </div>
                             <div className="row row-content" style={{marginBottom:'20px',marginTop:'30px', justifyContent:'right'}}>
-                                <p style={{color:'#494242', fontSize:'small'}}> Posted on {post.frontmatter.date}</p>
+                                <p className="lowcaption"> Posted on {post.frontmatter.date}</p>
                             </div>
                         </div>
                     </div>
