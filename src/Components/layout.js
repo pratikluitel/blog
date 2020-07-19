@@ -1,6 +1,6 @@
 import React from "react"
 import Footer from './FooterComponent'
-import './layout.css'
+import './layout.scss'
 import {Helmet} from 'react-helmet'
 import {graphql, useStaticQuery} from 'gatsby'
 
