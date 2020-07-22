@@ -14,6 +14,12 @@ export default function Post( {data} ) {
         <Layout>
             <Helmet>
                 <title>{post.frontmatter.title} -- {data.site.siteMetadata.author}</title>
+                <meta property="og:title" content={post.frontmatter.title}/>
+                <meta property="og:type" content="website"/>
+                <meta property="og:url" content={data.site.siteMetadata.site}/>
+                {featuredImg != null ? <meta property="og:image" content={`${featuredImg.childImageSharp.fluid.src}`}/>: null}
+                <meta property="og:site_name" content={data.site.siteMetadata.author}/>
+                <meta property="og:description" content={post.excerpt}/>
                 <link rel="canonical" href={`${data.site.siteMetadata.site}${post.fields.slug}`} />
             </Helmet>
             <Navigation isPostPage= {true} />
@@ -22,10 +28,10 @@ export default function Post( {data} ) {
                     <div className="row">
                         <div className="col-10 col-md-8 col-lg-6 offset-1 offset-md-2 offset-lg-3">
                             <div className="row row-header justify-content-center" style={{marginTop: 100+'px'}} id="title">
-                                <h1 style={{color:"#22a39f"}}><strong>{ post.frontmatter.title }</strong></h1>
+                                <h1><strong>{ post.frontmatter.title }</strong></h1>
                             </div>
                             <div className="row justify-content-center" style={{marginBottom: 20+'px'}} >
-                                {featuredImg != null?<Img fluid={featuredImg.childImageSharp.fluid} style={{marginBottom: 5+'px', width:90+'%', borderRadius:5+'px'}} alt={`${post.frontmatter.image}`}/>:null}
+                                {featuredImg != null?<Img fluid={featuredImg.childImageSharp.fluid} style={{marginBottom: 5+'px', width:90+'%', borderRadius:5+'px'}} alt={`${post.frontmatter.alt}`}/>:null}
                                 <p className="caption">{ post.frontmatter.caption }</p>
                             </div>
                             <div className="row row-content" id="conttt">
@@ -36,7 +42,7 @@ export default function Post( {data} ) {
                             </div>
                         </div>
                     </div>
-                    <Share slug={post.fields.slug}/>
+                    <Share slug={post.fields.slug} site={data.site.siteMetadata.site}/>
                     <Recommend ttl={post.frontmatter.title}/>
                 </div>
             </section>
@@ -54,6 +60,7 @@ export const query = graphql`
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

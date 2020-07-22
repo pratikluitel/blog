@@ -13,6 +13,12 @@ const Home = ({data}) => (
       <title>{data.site.siteMetadata.title}</title>
       <link rel="canonical" href={data.site.siteMetadata.site} />
       <meta name="description" content={data.site.siteMetadata.siteDesc}/>
+      <meta property="og:title" content={data.site.siteMetadata.title}/>
+      <meta property="og:type" content="website"/>
+      <meta property="og:url" content={data.site.siteMetadata.site}/>
+      <meta property="og:image" content='./images/img/personal/jumbotron.webp'/>
+      <meta property="og:site_name" content={`${data.site.siteMetadata.author} -- A Blog`}/>
+      <meta property="og:description" content={data.site.siteMetadata.siteDesc}/>
     </Helmet>
     <Navigation typenav='nav'/>
     <Header author={data.site.siteMetadata.author} desc={data.site.siteMetadata.description} image={data.allImageSharp.nodes[0].fluid}/>
