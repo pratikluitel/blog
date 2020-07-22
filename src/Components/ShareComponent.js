@@ -39,16 +39,16 @@ class Share extends Component{
                     <div className="dropdown-menu">
                         <div className="con" style={{padding:15+'px'}}>
                             <div className="row">
-                                <a href={`http://www.facebook.com/sharer.php?u=https://pratikl.com.np${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"><span className="fa fa-facebook"></span></a>
+                                <a href={`http://www.facebook.com/sharer.php?u=${this.props.site}${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"><span className="fa fa-facebook"></span></a>
                             </div>
                             <div className="row">
-                                <a href={`https://www.twitter.com/share?url=https://pratikl.com.np${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"><span className="fa fa-twitter"></span></a>
+                                <a href={`https://www.twitter.com/share?url=${this.props.site}${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"><span className="fa fa-twitter"></span></a>
                             </div>
                             <div className="row">
-                                <a href={`https://www.reddit.com/submit?url=https://pratikl.com.np${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"><span className="fa fa-reddit"></span></a>
+                                <a href={`https://www.reddit.com/submit?url=${this.props.site}${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"><span className="fa fa-reddit"></span></a>
                             </div>
                             <div className="row">
-                                <a href={`https://www.linkedin.com/shareArticle?mini=true&url=https://pratikl.com.np${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"><span className="fa fa-linkedin"></span></a>
+                                <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${this.props.site}${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"><span className="fa fa-linkedin"></span></a>
                             </div>
                             
                         </div>
@@ -62,16 +62,16 @@ class Share extends Component{
                                 <span className="sharetxt"><strong>Share:</strong></span>
                             </div>
                             <div className="col-1">
-                                <a href={`http://www.facebook.com/sharer.php?u=https://pratikl.com.np${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"><span className="fa fa-facebook"></span></a>
+                                <a href={`http://www.facebook.com/sharer.php?u=${this.props.site}${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"><span className="fa fa-facebook"></span></a>
                             </div>
                             <div className="col-1">
-                                <a href={`https://www.twitter.com/share?url=https://pratikl.com.np${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"> <span className="fa fa-twitter"></span></a>
+                                <a href={`https://www.twitter.com/share?url=${this.props.site}${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"> <span className="fa fa-twitter"></span></a>
                             </div>
                             <div className="col-1" style={{marginLeft:5+'px'}}>
-                                <a href={`https://www.reddit.com/submit?url=https://pratikl.com.np${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"> <span className="fa fa-reddit"></span></a>
+                                <a href={`https://www.reddit.com/submit?url=${this.props.site}${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"> <span className="fa fa-reddit"></span></a>
                             </div>
                             <div className="col-1" style={{marginLeft:5+'px'}}>
-                                <a href={`https://www.linkedin.com/shareArticle?mini=true&url=https://pratikl.com.np${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"><span className="fa fa-linkedin"></span></a>
+                                <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${this.props.site}${this.props.slug}`} target="_blank" rel="noreferrer" aria-label="share"><span className="fa fa-linkedin"></span></a>
                             </div>
                         </div>
                 </div>

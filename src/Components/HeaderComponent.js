@@ -20,7 +20,7 @@ function Header({author, desc, image}){
                             <hr style={{ width: 300+'px'}} />
                         </div>
                         <div className="col-12 d-block d-sm-none">
-                            <hr style={{ width:90+'%', borderTop: '1px solid'}} />
+                            <hr style={{ width:90+'%'}} />
                         </div>
                         <div className="col-12">
                             <h5 style={{color:"#ffffff"}}>{desc}</h5>

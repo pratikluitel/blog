@@ -1,4 +1,5 @@
 //colors
+$background: white;
 $primary-theme: #59bab7;
 $light-primary-theme:#8bcbc9;
 $highlight-theme: #22a39f;
@@ -88,6 +89,7 @@ body{
   color: $body-font-primary;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: $background;
 }
 
 #conttt{
