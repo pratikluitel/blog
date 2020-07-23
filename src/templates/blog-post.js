@@ -14,12 +14,6 @@ export default function Post( {data} ) {
         <Layout>
             <Helmet>
                 <title>{post.frontmatter.title} -- {data.site.siteMetadata.author}</title>
-                <meta property="og:title" content={post.frontmatter.title}/>
-                <meta property="og:type" content="website"/>
-                <meta property="og:url" content={data.site.siteMetadata.site}/>
-                {featuredImg != null ? <meta property="og:image" content={`${featuredImg.childImageSharp.fluid.src}`}/>: null}
-                <meta property="og:site_name" content={data.site.siteMetadata.author}/>
-                <meta property="og:description" content={post.excerpt}/>
                 <link rel="canonical" href={`${data.site.siteMetadata.site}${post.fields.slug}`} />
             </Helmet>
             <Navigation isPostPage= {true} />
