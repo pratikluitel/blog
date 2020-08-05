@@ -6,6 +6,7 @@ src/poems
 src/stories
 src/images
 static/fonts
+archive
 
 #src files for categories
 src/pages/essays.js
