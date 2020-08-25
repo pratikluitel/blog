@@ -247,6 +247,7 @@ a:hover {
   padding-top: 15px;
   padding-bottom: 15px;
   position: absolute;
+  transition: top 0.3s;
   top: 100%;
   right: 0%;
   width: 100%;
@@ -294,6 +295,7 @@ hr {
 
 #main {
   padding-bottom: 80px;
+  padding-top: 30px;
 }
 
 #mainlist {

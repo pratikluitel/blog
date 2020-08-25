@@ -28,8 +28,16 @@ class Navigation extends Component {
     function myFunction() {
       if (window.pageYOffset >= sticky) {
         navbar.classList.add("sticky")
+        if (document.getElementById("nav")) {
+          document.getElementById("nav").style.top = "0"
+          document.getElementById("nav").style.opacity = "100%"
+        }
       } else {
         navbar.classList.remove("sticky")
+        if (document.getElementById("nav")) {
+          document.getElementById("nav").style.top = "-80px"
+          document.getElementById("nav").style.opacity = "0%"
+        }
       }
     }
 
