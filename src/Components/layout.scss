@@ -334,7 +334,10 @@ hr {
 }
 
 #nav {
+  top: 0%;
+  position: fixed;
   text-align: right;
+  opacity: 0;
 }
 
 .sticky {
