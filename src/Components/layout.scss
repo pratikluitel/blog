@@ -1,90 +1,100 @@
 //colors
 $background: white;
 $primary-theme: #59bab7;
-$light-primary-theme:#8bcbc9;
+$light-primary-theme: #8bcbc9;
 $highlight-theme: #22a39f;
 $secondary-theme: #222222;
-$light-secondary-theme:#434242;
+$light-secondary-theme: #434242;
 $body-font-primary: black;
 $body-font-secondary: white;
-$card-primary:#f3efe0;
+$card-primary: #f3efe0;
 $footer-primary: #6c7272;
 $footer-text: #bebebe;
 
 @font-face {
-  font-family: 'Merry';
-  src: url('../../static/fonts/Josefin/merriweather-regular-webfont.woff2') format('woff2'),
-       url('../../static/fonts/Josefin/merriweather-regular-webfont.woff') format('woff');
+  font-family: "Merry";
+  src: url("../../static/fonts/Josefin/merriweather-regular-webfont.woff2")
+      format("woff2"),
+    url("../../static/fonts/Josefin/merriweather-regular-webfont.woff")
+      format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Merry';
-  src: url('../../static/fonts/Josefin/merriweather-italic-webfont.woff2') format('woff2'),
-       url('../../static/fonts/Josefin/merriweather-italic-webfont.woff') format('woff');
+  font-family: "Merry";
+  src: url("../../static/fonts/Josefin/merriweather-italic-webfont.woff2")
+      format("woff2"),
+    url("../../static/fonts/Josefin/merriweather-italic-webfont.woff")
+      format("woff");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Merry';
-  src: url('../../static/fonts/Josefin/merriweather-bold-webfont.woff2') format('woff2'),
-       url('../../static/fonts/Josefin/merriweather-bold-webfont.woff') format('woff');
+  font-family: "Merry";
+  src: url("../../static/fonts/Josefin/merriweather-bold-webfont.woff2")
+      format("woff2"),
+    url("../../static/fonts/Josefin/merriweather-bold-webfont.woff")
+      format("woff");
   font-weight: normal;
   font-style: bold;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Merry';
-  src: url('../../static/fonts/Josefin/merriweather-light-webfont.woff2') format('woff2'),
-       url('../../static/fonts/Josefin/merriweather-light-webfont.woff') format('woff');
+  font-family: "Merry";
+  src: url("../../static/fonts/Josefin/merriweather-light-webfont.woff2")
+      format("woff2"),
+    url("../../static/fonts/Josefin/merriweather-light-webfont.woff")
+      format("woff");
   font-weight: lighter;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Merry';
-  src: url('../../static/fonts/Josefin/merriweather-lightitalic-webfont.woff2') format('woff2'),
-       url('../../static/fonts/Josefin/merriweather-lightitalic-webfont.woff') format('woff');
+  font-family: "Merry";
+  src: url("../../static/fonts/Josefin/merriweather-lightitalic-webfont.woff2")
+      format("woff2"),
+    url("../../static/fonts/Josefin/merriweather-lightitalic-webfont.woff")
+      format("woff");
   font-weight: lighter;
   font-style: italic;
-  font-display: swap
+  font-display: swap;
 }
 
 @media (max-width: 500px) {
   #conttt {
-    font-size: 16px; 
-  } 
-  #conttt div :first-child::first-letter{
+    font-size: 16px;
+  }
+  #conttt div :first-child::first-letter {
     font-size: 70px;
   }
 }
-  
+
 @media (min-width: 500px) and (max-width: 900px) {
   #conttt {
-    font-size: 17px; 
-  } 
+    font-size: 17px;
+  }
   #conttt div :first-child::first-letter {
     font-size: 72px;
   }
 }
-  
+
 @media (min-width: 900px) {
   #conttt {
-    font-size: 18px; 
-  } 
-  #conttt div :first-child::first-letter{
+    font-size: 18px;
+  }
+  #conttt div :first-child::first-letter {
     font-size: 74px;
   }
 }
 
 html {
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
 }
 
-body{
-  font-family: 'Merry';
+body {
+  font-family: "Merry";
   font-weight: normal;
   color: $body-font-primary;
   -webkit-font-smoothing: antialiased;
@@ -92,27 +102,26 @@ body{
   background-color: $background;
 }
 
-#conttt{
+#conttt {
   line-height: 0.77cm;
-  div :first-child::first-letter{
+  div :first-child::first-letter {
     font-family: sans-serif;
-    float       : left;
-    margin      : 0.1em 0.153em 0.14em 0;
+    float: left;
+    margin: 0.1em 0.153em 0.14em 0;
     color: $primary-theme;
   }
 }
 
 a {
-  color: $highlight-theme; 
+  color: $highlight-theme;
 }
 
 a:hover {
   text-decoration: none;
-  color: $primary-theme; 
+  color: $primary-theme;
 }
-  
+
 .jumbotron {
-    
   padding: 0px;
   margin: 0px;
   min-height: 100%;
@@ -121,13 +130,13 @@ a:hover {
   text-align: center;
   /* background: no-repeat center center fixed url("../images/img/personal/jumbotron.webp");
   background-size: cover;  */
-  
-  .bgim{
+
+  .bgim {
     overflow: hidden;
     position: absolute;
     top: 0px;
-    width:100%; 
-    height:100%;
+    width: 100%;
+    height: 100%;
     text-align: center;
   }
   #hd-jumbo {
@@ -141,74 +150,76 @@ a:hover {
     left: 0px;
     right: 0px;
     opacity: 0.75;
-    z-index: 0; }
+    z-index: 0;
+  }
   h2 {
-    font-size: 60px; 
+    font-size: 60px;
   }
   h5 {
-    font-weight: 1; 
+    font-weight: 1;
   }
   hr {
     margin-left: auto;
     margin-right: auto;
-    border-top: 1px solid $light-primary-theme; 
+    border-top: 1px solid $light-primary-theme;
   }
   .btn-secondary {
     animation-name: example;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    border: $primary-theme; 
+    border: $primary-theme;
   }
   .btn-secondary:hover {
     animation-name: none;
-    background-color: $highlight-theme; 
+    background-color: $highlight-theme;
   }
 }
-  
+
 @keyframes example {
   0% {
-    background-color: $light-primary-theme 
+    background-color: $light-primary-theme;
   }
   50% {
-    background-color: $primary-theme; }
+    background-color: $primary-theme;
+  }
   100% {
-    background-color: $light-primary-theme 
-  } 
+    background-color: $light-primary-theme;
+  }
 }
-  
+
 .active {
-  background-color: $primary-theme; 
+  background-color: $primary-theme;
 }
 
 .dropdown-menu {
   display: block;
   visibility: hidden;
-  opacity:0;
+  opacity: 0;
   transform: translateY(50px);
-  transition:.5s ease all;
+  transition: 0.5s ease all;
   border: none;
-  font-size:27px;
-  min-width:0px; 
-  background-color:rgba(0,0,0,0);
-  padding-top:20px;
+  font-size: 27px;
+  min-width: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  padding-top: 20px;
 }
 .dropdown-menu.show {
   display: block;
   visibility: visible;
-  opacity:1;
+  opacity: 1;
   transform: translateY(0px);
-  transition:.5s ease all;
+  transition: 0.5s ease all;
 }
 .nav {
   font-family: Arial, Helvetica, sans-serif;
   background-color: $secondary-theme;
   top: 34%;
   right: 4%;
-  z-index: 999; 
-  ul{
-    margin:0px
+  z-index: 999;
+  ul {
+    margin: 0px;
   }
-  li{
+  li {
     margin-bottom: 0px;
   }
   li:hover {
@@ -217,53 +228,54 @@ a:hover {
   .navbar-nav a {
     display: block;
     margin: 0px;
-    padding:13px;
-    color: $body-font-secondary; 
+    padding: 13px;
+    color: $body-font-secondary;
   }
 }
 
 .nav-not-sm {
   position: fixed;
-  width: 12%; 
+  width: 12%;
 }
-  
+
 .nav-for-lg {
   position: fixed;
-  width: 9%; 
+  width: 9%;
 }
-  
+
 .nav-smol {
   padding-top: 15px;
   padding-bottom: 15px;
   position: absolute;
   top: 100%;
   right: 0%;
-  width: 100%; 
+  width: 100%;
+  transition: opacity 0.4s ease-in-out, top 0.4s;
 }
-  
+
 .vertical-center {
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
-  
+
 #bloghead {
-  font-family: 'Merry';
+  font-family: "Merry";
   margin-top: 100px;
-  margin-bottom: 80px; 
+  margin-bottom: 80px;
 
   h1 {
     color: $highlight-theme;
-    font-size: 45px; 
+    font-size: 45px;
   }
   #blognav {
     border-radius: 0px;
-    background-color: $light-secondary-theme; 
+    background-color: $light-secondary-theme;
     a {
       display: block;
-      color: $body-font-secondary; 
+      color: $body-font-secondary;
     }
     .col-4:hover {
-      background-color: $highlight-theme; 
+      background-color: $highlight-theme;
     }
   }
 }
@@ -272,74 +284,75 @@ hr {
   height: 1px;
   border: 1;
   margin: 1em 0;
-  padding: 0; 
+  padding: 0;
 }
 
 .affix {
   top: 0;
   width: 100%;
-  z-index: 9999 !important; 
+  z-index: 9999 !important;
 }
 
 #main {
-  padding-bottom: 80px; 
+  padding-bottom: 80px;
+  padding-top: 30px;
 }
 
 #mainlist {
-  list-style-type: none; 
+  list-style-type: none;
 }
-  
+
 .footer {
   margin: 0px;
-  padding: 100px 0px 100px 0px;
+  padding: 120px 0px 100px 0px;
   background-color: $light-secondary-theme;
-  color: $footer-text; 
+  color: $footer-text;
   hr {
-    border-top: 1px solid $footer-primary; 
+    border-top: 1px solid $footer-primary;
   }
   .row-header {
-    padding: 20px; 
+    padding: 20px;
   }
   ul li {
     list-style-type: none;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
   }
   a {
     color: $footer-text;
-    text-decoration: none; 
+    text-decoration: none;
   }
   a:hover {
-    color: $body-font-secondary; 
+    color: $body-font-secondary;
   }
   .fa {
-    font-size: xx-large; 
+    font-size: xx-large;
   }
 }
-  
+
 #contactlinks {
-  padding: 30px; 
+  padding: 30px;
 }
 
 #nav {
-  text-align: right; 
+  text-align: right;
 }
 
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%; 
+  width: 100%;
 }
 
 #alt-nav {
   top: 0%;
   position: fixed;
-  text-align: right; 
+  text-align: right;
 }
 
 #title {
   text-align: center;
   color: $highlight-theme;
-  padding-bottom: 60px; 
+  padding-bottom: 60px;
 }
 
 .author-pic {
@@ -349,57 +362,57 @@ hr {
   margin-top: 40px;
   overflow: hidden;
 }
-  
+
 .card {
-background-color: $card-primary;
-margin-bottom: 30px; 
+  background-color: $card-primary;
+  margin-bottom: 30px;
   .card-title {
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 10px;
     background-color: $card-primary;
-    color: $primary-theme; 
+    color: $primary-theme;
   }
   .card-body {
-    padding: 0px; 
+    padding: 0px;
     .imgcont {
-      overflow: hidden; 
+      overflow: hidden;
       #date {
         font-size: small;
         color: $body-font-secondary;
         padding: 3px;
-        background-color: $primary-theme; 
+        background-color: $primary-theme;
       }
       .card-img-top {
         width: 100%;
         height: 20vw;
         object-fit: cover;
         margin-bottom: 5px;
-        transition: transform .4s ease; 
+        transition: transform 0.4s ease;
       }
     }
     .card-content {
       margin-left: 20px;
-      margin-right: 20px; 
+      margin-right: 20px;
       #date {
         color: $light-secondary-theme;
-        font-size: x-small; 
+        font-size: x-small;
       }
     }
   }
 }
-  
+
 .card:hover {
   .card-title {
-    color: $highlight-theme; 
+    color: $highlight-theme;
   }
   .imgcont {
     #date {
-      background-color: $highlight-theme; 
+      background-color: $highlight-theme;
     }
     .card-img-top {
-    transform: scale(1.04);
-    transform-origin: 50% 50%; 
+      transform: scale(1.04);
+      transform-origin: 50% 50%;
     }
   }
 }
@@ -412,21 +425,21 @@ margin-bottom: 30px;
 .sharecontainer {
   top: 32%;
   left: 7%;
-  position:fixed;
+  position: fixed;
 }
 
-.sharetxt{
-  font-size:18px;
-  color: $highlight-theme
+.sharetxt {
+  font-size: 18px;
+  color: $highlight-theme;
 }
 
-.caption{
-  color:$light-secondary-theme;
+.caption {
+  color: $light-secondary-theme;
   font-size: x-small;
   text-align: right;
   width: 90%;
 }
-.lowcaption{
-  color:$light-secondary-theme;
-  font-size:small;
+.lowcaption {
+  color: $light-secondary-theme;
+  font-size: small;
 }
