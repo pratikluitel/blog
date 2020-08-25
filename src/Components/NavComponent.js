@@ -18,22 +18,14 @@ class Navigation extends Component {
       myFunction()
     }
 
-    // Get the navbar
-    var navbar = document.getElementById(this.props.typenav)
-
-    // Get the offset position of the navbar
-    var sticky = navbar.offsetTop
-
-    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    // for homescreen (that has the 'nav' id), display navbar only when scrolling down one page
     function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
+      if (window.pageYOffset >= $(window).height()) {
         if (document.getElementById("nav")) {
           document.getElementById("nav").style.top = "0"
           document.getElementById("nav").style.opacity = "100%"
         }
       } else {
-        navbar.classList.remove("sticky")
         if (document.getElementById("nav")) {
           document.getElementById("nav").style.top = "-80px"
           document.getElementById("nav").style.opacity = "0%"
