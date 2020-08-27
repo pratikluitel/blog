@@ -124,12 +124,10 @@ a:hover {
 .jumbotron {
   padding: 0px;
   margin: 0px;
-  min-height: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  background-color: $background;
   border-radius: 0px;
   text-align: center;
-  /* background: no-repeat center center fixed url("../images/img/personal/jumbotron.webp");
-  background-size: cover;  */
 
   .bgim {
     overflow: hidden;
@@ -141,6 +139,7 @@ a:hover {
   }
   #hd-jumbo {
     display: inline-block;
+    height: 50%;
   }
   .overlay {
     background-color: $highlight-theme;

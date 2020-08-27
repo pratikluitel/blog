@@ -6,7 +6,7 @@ import { Button } from "@material-ui/core"
 function Header({ author, desc, image }) {
   return (
     <section className="Home">
-      <div className="jumbotron vertical-center" id="#home">
+      <div className="jumbotron vertical-center">
         <div className="bgim">
           <Img
             fluid={image}
