@@ -22,13 +22,13 @@ class Navigation extends Component {
     function myFunction() {
       if (window.pageYOffset >= $(window).height()) {
         if (document.getElementById("nav")) {
-          document.getElementById("nav").style.top = "0"
-          document.getElementById("nav").style.opacity = "100%"
+          $("#nav").css("opacity", "1")
+          $("#nav").css("top", "0")
         }
       } else {
         if (document.getElementById("nav")) {
-          document.getElementById("nav").style.top = "-80px"
-          document.getElementById("nav").style.opacity = "0%"
+          $("#nav").css("opacity", "0")
+          $("#nav").css("top", "-80px")
         }
       }
     }
